@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDAFCD142922073C009668A9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; };
+		FDAFCD152922073C009668A9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
 		FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1042921BC4500852207 /* SceneDelegate.swift */; };
 		FDCFC1072921BC4500852207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1062921BC4500852207 /* ViewController.swift */; };
-		FDCFC10A2921BC4500852207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC1082921BC4500852207 /* Main.storyboard */; };
 		FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10B2921BC4600852207 /* Assets.xcassets */; };
 		FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10D2921BC4600852207 /* LaunchScreen.storyboard */; };
 		FDCFC11A2921BC4600852207 /* Jobplanet_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1192921BC4600852207 /* Jobplanet_testTests.swift */; };
 		FDCFC1242921BC4600852207 /* Jobplanet_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1232921BC4600852207 /* Jobplanet_testUITests.swift */; };
 		FDCFC1262921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */; };
+		FDCFC1E92922065700852207 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; };
+		FDCFC1EA2922065700852207 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FDAFCD0E29220734009668A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDAFCD0929220734009668A9 /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD7A2C322922070400A856F1;
+			remoteInfo = Domain;
+		};
+		FDAFCD1029220734009668A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDAFCD0929220734009668A9 /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD7A2C3A2922070400A856F1;
+			remoteInfo = DomainTests;
+		};
 		FDCFC1162921BC4600852207 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDCFC0F72921BC4500852207 /* Project object */;
@@ -33,14 +50,43 @@
 			remoteGlobalIDString = FDCFC0FE2921BC4500852207;
 			remoteInfo = "Jobplanet-test";
 		};
+		FDCFC1E42922063F00852207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDCFC1C72922063E00852207;
+			remoteInfo = NetworkPlatform;
+		};
+		FDCFC1E62922063F00852207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDCFC1CF2922063F00852207;
+			remoteInfo = NetworkPlatformTests;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FDCFC1EB2922065700852207 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDAFCD152922073C009668A9 /* Domain.framework in Embed Frameworks */,
+				FDCFC1EA2922065700852207 /* NetworkPlatform.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FDAFCD0929220734009668A9 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1042921BC4500852207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1062921BC4500852207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FDCFC1092921BC4500852207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDCFC10B2921BC4600852207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCFC10E2921BC4600852207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCFC1102921BC4600852207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +95,7 @@
 		FDCFC11F2921BC4600852207 /* Jobplanet-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jobplanet-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1232921BC4600852207 /* Jobplanet_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITests.swift; sourceTree = "<group>"; };
 		FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkPlatform.xcodeproj; path = ../NetworkPlatform/NetworkPlatform.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAFCD142922073C009668A9 /* Domain.framework in Frameworks */,
+				FDCFC1E92922065700852207 /* NetworkPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +125,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDAFCD0A29220734009668A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFCD0F29220734009668A9 /* Domain.framework */,
+				FDAFCD1129220734009668A9 /* DomainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FDCFC0F62921BC4500852207 = {
 			isa = PBXGroup;
 			children = (
 				FDCFC1012921BC4500852207 /* Jobplanet-test */,
 				FDCFC1182921BC4600852207 /* Jobplanet-testTests */,
 				FDCFC1222921BC4600852207 /* Jobplanet-testUITests */,
+				FDAFCD0929220734009668A9 /* Domain.xcodeproj */,
+				FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */,
 				FDCFC1002921BC4500852207 /* Products */,
+				FDCFC1E82922065700852207 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +163,6 @@
 				FDCFC1022921BC4500852207 /* AppDelegate.swift */,
 				FDCFC1042921BC4500852207 /* SceneDelegate.swift */,
 				FDCFC1062921BC4500852207 /* ViewController.swift */,
-				FDCFC1082921BC4500852207 /* Main.storyboard */,
 				FDCFC10B2921BC4600852207 /* Assets.xcassets */,
 				FDCFC10D2921BC4600852207 /* LaunchScreen.storyboard */,
 				FDCFC1102921BC4600852207 /* Info.plist */,
@@ -127,6 +187,22 @@
 			path = "Jobplanet-testUITests";
 			sourceTree = "<group>";
 		};
+		FDCFC1E02922063F00852207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDCFC1E52922063F00852207 /* NetworkPlatform.framework */,
+				FDCFC1E72922063F00852207 /* NetworkPlatformTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDCFC1E82922065700852207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +213,7 @@
 				FDCFC0FB2921BC4500852207 /* Sources */,
 				FDCFC0FC2921BC4500852207 /* Frameworks */,
 				FDCFC0FD2921BC4500852207 /* Resources */,
+				FDCFC1EB2922065700852207 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +294,16 @@
 			mainGroup = FDCFC0F62921BC4500852207;
 			productRefGroup = FDCFC1002921BC4500852207 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FDAFCD0A29220734009668A9 /* Products */;
+					ProjectRef = FDAFCD0929220734009668A9 /* Domain.xcodeproj */;
+				},
+				{
+					ProductGroup = FDCFC1E02922063F00852207 /* Products */;
+					ProjectRef = FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FDCFC0FE2921BC4500852207 /* Jobplanet-test */,
@@ -226,6 +313,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		FDAFCD0F29220734009668A9 /* Domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain.framework;
+			remoteRef = FDAFCD0E29220734009668A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDAFCD1129220734009668A9 /* DomainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainTests.xctest;
+			remoteRef = FDAFCD1029220734009668A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDCFC1E52922063F00852207 /* NetworkPlatform.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkPlatform.framework;
+			remoteRef = FDCFC1E42922063F00852207 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDCFC1E72922063F00852207 /* NetworkPlatformTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkPlatformTests.xctest;
+			remoteRef = FDCFC1E62922063F00852207 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		FDCFC0FD2921BC4500852207 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -233,7 +351,6 @@
 			files = (
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
-				FDCFC10A2921BC4500852207 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +414,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDCFC1082921BC4500852207 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FDCFC1092921BC4500852207 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FDCFC10D2921BC4600852207 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +551,7 @@
 				INFOPLIST_FILE = "Jobplanet-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -471,7 +580,7 @@
 				INFOPLIST_FILE = "Jobplanet-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
