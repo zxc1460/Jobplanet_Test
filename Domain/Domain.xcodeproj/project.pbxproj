@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF960C24292272B4003F7925 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF960C23292272B4003F7925 /* RxSwift */; };
 		FD7A2C3B2922070400A856F1 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7A2C322922070400A856F1 /* Domain.framework */; };
 		FD7A2C402922070400A856F1 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A2C3F2922070400A856F1 /* DomainTests.swift */; };
 		FD7A2C412922070400A856F1 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7A2C352922070400A856F1 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF960C24292272B4003F7925 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +143,9 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				AF960C23292272B4003F7925 /* RxSwift */,
+			);
 			productName = Domain;
 			productReference = FD7A2C322922070400A856F1 /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -183,7 +188,7 @@
 				};
 			};
 			buildConfigurationList = FD7A2C2C2922070400A856F1 /* Build configuration list for PBXProject "Domain" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -191,6 +196,9 @@
 				Base,
 			);
 			mainGroup = FD7A2C282922070400A856F1;
+			packageReferences = (
+				AF960C22292272B4003F7925 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = FD7A2C332922070400A856F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -384,6 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +423,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +504,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF960C22292272B4003F7925 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF960C23292272B4003F7925 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF960C22292272B4003F7925 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD7A2C292922070400A856F1 /* Project object */;
 }

@@ -7,13 +7,14 @@
 
 import Foundation
 
-public struct Company: Codable {
+public struct Company {
     let name: String
     let logoURL: String
     let ratings: [Rating]
     
-    private enum CodingKeys: String, CodingKey {
-        case name, ratings
-        case logoURL = "logo_path"
+    public init(name: String, logoURL: String, ratings: [Rating]) {
+        self.name = name
+        self.logoURL = logoURL
+        self.ratings = ratings
     }
 }

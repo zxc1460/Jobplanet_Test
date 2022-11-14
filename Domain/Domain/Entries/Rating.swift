@@ -7,7 +7,12 @@
 
 import Foundation
 
-public struct Rating: Codable {
+public struct Rating {
     let type: String
     let rating: Double
+    
+    public init(type: String, rating: Double) {
+        self.type = type
+        self.rating = rating
+    }
 }
