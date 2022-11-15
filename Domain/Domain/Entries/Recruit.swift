@@ -8,12 +8,12 @@
 import Foundation
 
 public struct Recruit {
-    let id: Int
-    let title: String
-    let reward: Int
-    let appeal: String
-    let imageURL: String
-    let company: Company
+    public let id: Int
+    public let title: String
+    public let reward: Int
+    public let appeal: String
+    public let imageURL: String
+    public let company: Company
     
     public init(
         id: Int,

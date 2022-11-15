@@ -11,87 +11,65 @@ import RxSwift
 protocol Caching {
     associatedtype KeyType
     associatedtype ValueType
-    func save(key: KeyType, value: [ValueType]) -> Completable
-    func fetch(key: KeyType) -> Maybe<[ValueType]>
+    func save(key: KeyType, value: ValueType) -> Single<Void>
+    func fetch(key: KeyType) -> Single<ValueType?>
 }
 
-final class Cache<K: Hashable, V: DomainType>: Caching {
+final class Cache<K: Hashable, V>: Caching {
     typealias KeyType = K
     typealias ValueType = V
     
-    enum Error: Swift.Error {
-        case save([V])
-        case fetch(V.Type)
-        case directoryNotFound
-    }
-    
-    enum FileNames {
-        static var objectsFileName: String {
-            return "\(V.self)s.dat"
+    private final class WrappedKey: NSObject {
+        let key: K
+        
+        init(_ key: K) {
+            self.key = key
+        }
+        
+        override var hash: Int {
+            return key.hashValue
+        }
+        
+        override func isEqual(_ object: Any?) -> Bool {
+            guard let value = object as? WrappedKey else {
+                return false
+            }
+            
+            return value.key == key
         }
     }
     
-    private let path: String
-    private let cacheScheduler = SerialDispatchQueueScheduler(internalSerialQueueName: "com.seok.Jobplanet-test.Cache.queue")
-    
-    init(path: String) {
-        self.path = path
+    private final class Entry {
+        let value: V
+        
+        init(value: V) {
+            self.value = value
+        }
     }
     
-    func save(key: K, value: [V]) -> Completable {
-        return Completable.create { (observer) -> Disposable in
-            guard let directoryURL = self.directoryURL() else {
-                observer(.error(Error.directoryNotFound))
-                return Disposables.create()
-            }
-            let path = directoryURL
-                .appendingPathComponent(FileNames.objectsFileName)
-            self.makeDirectoryIfNeeded(url: directoryURL)
-            do {
-                try NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false).write(to: path)
-                observer(.completed)
-            } catch {
-                observer(.error(error))
-            }
+    private let cacheScheduler = SerialDispatchQueueScheduler(internalSerialQueueName: "com.seok.Jobplanet-test.Cache.queue")
+    private let wrapped = NSCache<WrappedKey, Entry>()
+    
+    func save(key: K, value: V) -> Single<Void> {
+        return Single<Void>.create { [weak self] (observer) -> Disposable in
+            let entry = Entry(value: value)
+            
+            self?.wrapped.setObject(entry, forKey: WrappedKey(key))
+            
+            observer(.success(()))
             
             return Disposables.create()
         }
         .subscribe(on: cacheScheduler)
     }
     
-    func fetch(key: K) -> Maybe<[V]> {
-        return Maybe<[V]>.create { (observer) -> Disposable in
-            guard let directoryURL = self.directoryURL() else {
-                observer(.completed)
-                return Disposables.create()
-            }
-            let fileURL = directoryURL
-                .appendingPathComponent(FileNames.objectsFileName)
-            guard let objects = NSKeyedUnarchiver.unar as? [V] else {
-                observer(.completed)
-                return Disposables.create()
-            }
-            observer(MaybeEvent.success(objects.map { $0.asDomain() }))
-                return Disposables.create()
-        }.subscribe(on: cacheScheduler)
-    }
-    
-    private func directoryURL() -> URL? {
-        return FileManager.default
-            .urls(for: .documentDirectory, in: .userDomainMask)
-            .first?
-            .appendingPathComponent(path)
-    }
-    
-    private func makeDirectoryIfNeeded(url: URL) {
-        do {
-            try FileManager.default.createDirectory(
-                at: url,
-                withIntermediateDirectories: true
-            )
-        } catch {
-            print("File: \(#file), function: \(#function)")
+    func fetch(key: K) -> Single<V?> {
+        return Single<V?>.create { [weak self] (observer) -> Disposable in
+            let value = self?.wrapped.object(forKey: WrappedKey(key))?.value
+            
+            observer(.success(value))
+            
+            return Disposables.create()
         }
     }
-    
 }

@@ -13,6 +13,12 @@
 		AF960C28292274B1003F7925 /* RecruitDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C27292274B1003F7925 /* RecruitDTO+Mapping.swift */; };
 		AF960C2A292281EC003F7925 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C29292281EC003F7925 /* Cache.swift */; };
 		FD7A2C272922068E00A856F1 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD7A2C262922068E00A856F1 /* RxAlamofire */; };
+		FDCDB44D2923148E00D11533 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB44C2923148E00D11533 /* Network.swift */; };
+		FDCDB44F2923168500D11533 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB44E2923168500D11533 /* NetworkProvider.swift */; };
+		FDCDB45129231F9600D11533 /* RecruitsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB45029231F9600D11533 /* RecruitsNetwork.swift */; };
+		FDCDB4532923202A00D11533 /* RecruitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB4522923202A00D11533 /* RecruitResponse.swift */; };
+		FDCDB4562923216E00D11533 /* RecruitUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB4552923216E00D11533 /* RecruitUseCase.swift */; };
+		FDCDB45829232A6F00D11533 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDB45729232A6F00D11533 /* UseCaseProvider.swift */; };
 		FDCFC1D02922063F00852207 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1C72922063E00852207 /* NetworkPlatform.framework */; };
 		FDCFC1D52922063F00852207 /* NetworkPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1D42922063F00852207 /* NetworkPlatformTests.swift */; };
 		FDCFC1D62922063F00852207 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = FDCFC1CA2922063E00852207 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +40,12 @@
 		AF960C2529227413003F7925 /* CompanyDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyDTO+Mapping.swift"; sourceTree = "<group>"; };
 		AF960C27292274B1003F7925 /* RecruitDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecruitDTO+Mapping.swift"; sourceTree = "<group>"; };
 		AF960C29292281EC003F7925 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		FDCDB44C2923148E00D11533 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FDCDB44E2923168500D11533 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		FDCDB45029231F9600D11533 /* RecruitsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitsNetwork.swift; sourceTree = "<group>"; };
+		FDCDB4522923202A00D11533 /* RecruitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitResponse.swift; sourceTree = "<group>"; };
+		FDCDB4552923216E00D11533 /* RecruitUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitUseCase.swift; sourceTree = "<group>"; };
+		FDCDB45729232A6F00D11533 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FDCFC1C72922063E00852207 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1CA2922063E00852207 /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		FDCFC1CF2922063F00852207 /* NetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +75,7 @@
 		AF960C1B29226FED003F7925 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				FDCDB4522923202A00D11533 /* RecruitResponse.swift */,
 				AF960C27292274B1003F7925 /* RecruitDTO+Mapping.swift */,
 				AF960C2529227413003F7925 /* CompanyDTO+Mapping.swift */,
 				AF960C20292271CA003F7925 /* RatingDTO+Mapping.swift */,
@@ -71,19 +84,38 @@
 			path = DataMapping;
 			sourceTree = "<group>";
 		};
-		AF960C1C29227037003F7925 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		AF960C1D2922703B003F7925 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
 				AF960C29292281EC003F7925 /* Cache.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		FDCDB44A2923074A00D11533 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDB45029231F9600D11533 /* RecruitsNetwork.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FDCDB44B2923147700D11533 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDB44C2923148E00D11533 /* Network.swift */,
+				FDCDB44E2923168500D11533 /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FDCDB4542923214900D11533 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDB4552923216E00D11533 /* RecruitUseCase.swift */,
+				FDCDB45729232A6F00D11533 /* UseCaseProvider.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		FDCFC1BD2922063E00852207 = {
@@ -108,7 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				AF960C1D2922703B003F7925 /* Cache */,
-				AF960C1C29227037003F7925 /* API */,
+				FDCDB44A2923074A00D11533 /* API */,
+				FDCDB44B2923147700D11533 /* Network */,
+				FDCDB4542923214900D11533 /* UseCase */,
 				AF960C1B29226FED003F7925 /* DataMapping */,
 				FDCFC1CA2922063E00852207 /* NetworkPlatform.h */,
 			);
@@ -239,8 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDB4562923216E00D11533 /* RecruitUseCase.swift in Sources */,
+				FDCDB4532923202A00D11533 /* RecruitResponse.swift in Sources */,
+				FDCDB44F2923168500D11533 /* NetworkProvider.swift in Sources */,
+				FDCDB45829232A6F00D11533 /* UseCaseProvider.swift in Sources */,
 				AF960C2629227413003F7925 /* CompanyDTO+Mapping.swift in Sources */,
 				AF960C2A292281EC003F7925 /* Cache.swift in Sources */,
+				FDCDB45129231F9600D11533 /* RecruitsNetwork.swift in Sources */,
+				FDCDB44D2923148E00D11533 /* Network.swift in Sources */,
 				AF960C21292271CA003F7925 /* RatingDTO+Mapping.swift in Sources */,
 				AF960C1F29227172003F7925 /* DomainConvertibleType.swift in Sources */,
 				AF960C28292274B1003F7925 /* RecruitDTO+Mapping.swift in Sources */,
