@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Jobplanet_test" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olh-yi-8cq" userLabel="SearchView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d65-vM-nZc" userLabel="SearchBorderView">
+                            <rect key="frame" x="0.0" y="51" width="414" height="1"/>
+                            <color key="backgroundColor" name="jpGreen"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="4z5-Ke-Yx4"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_search" translatesAutoresizingMaskIntoConstraints="NO" id="oqv-OW-xzE">
+                            <rect key="frame" x="13" y="14" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="M46-Ou-SdP"/>
+                                <constraint firstAttribute="width" constant="24" id="Q5V-qG-hxq"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="기업, 채용 공고 검색" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-2c-T3S" userLabel="SearchTextField">
+                            <rect key="frame" x="45" y="13" width="353" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="W79-P8-fmx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="5CS-0S-pip"/>
+                        <constraint firstAttribute="trailing" secondItem="cx1-2c-T3S" secondAttribute="trailing" constant="16" id="EGN-gn-bUx"/>
+                        <constraint firstItem="cx1-2c-T3S" firstAttribute="leading" secondItem="oqv-OW-xzE" secondAttribute="trailing" constant="8" id="G2Z-Q8-qKz"/>
+                        <constraint firstItem="cx1-2c-T3S" firstAttribute="centerY" secondItem="olh-yi-8cq" secondAttribute="centerY" id="J0a-FT-2U2"/>
+                        <constraint firstItem="oqv-OW-xzE" firstAttribute="leading" secondItem="olh-yi-8cq" secondAttribute="leading" constant="13" id="X1R-fD-0us"/>
+                        <constraint firstItem="d65-vM-nZc" firstAttribute="leading" secondItem="olh-yi-8cq" secondAttribute="leading" id="gAz-NO-i1b"/>
+                        <constraint firstAttribute="bottom" secondItem="d65-vM-nZc" secondAttribute="bottom" id="jCx-9t-IZP"/>
+                        <constraint firstItem="oqv-OW-xzE" firstAttribute="centerY" secondItem="olh-yi-8cq" secondAttribute="centerY" id="rMY-yi-xxL"/>
+                        <constraint firstAttribute="trailing" secondItem="d65-vM-nZc" secondAttribute="trailing" id="rOd-hn-pSO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="olh-yi-8cq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F0P-xM-Mlk"/>
+                <constraint firstItem="olh-yi-8cq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OcT-hi-le6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="olh-yi-8cq" secondAttribute="trailing" id="bJg-aN-qly"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="135"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_logo_search" width="24" height="24"/>
+        <namedColor name="jpGreen">
+            <color red="0.0" green="0.76499998569488525" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

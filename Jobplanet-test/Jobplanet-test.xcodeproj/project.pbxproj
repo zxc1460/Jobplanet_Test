@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF960C312923C5F7003F7925 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C302923C5F7003F7925 /* Application.swift */; };
+		AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3C2923D367003F7925 /* HighlightedButton.swift */; };
+		AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */; };
+		AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C412923D408003F7925 /* UIFontExtension.swift */; };
+		AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C442923D4F2003F7925 /* MainViewController.swift */; };
+		AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF960C452923D4F2003F7925 /* MainViewController.xib */; };
+		AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C482923D57D003F7925 /* UIViewExtension.swift */; };
+		AF960C4A2923D5A4003F7925 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C482923D57D003F7925 /* UIViewExtension.swift */; };
 		FDAFCD142922073C009668A9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; };
 		FDAFCD152922073C009668A9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
@@ -82,6 +90,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF960C302923C5F7003F7925 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		AF960C3C2923D367003F7925 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
+		AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AF960C412923D408003F7925 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		AF960C442923D4F2003F7925 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AF960C452923D4F2003F7925 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		AF960C482923D57D003F7925 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FDAFCD0929220734009668A9 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +140,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF960C2B2923C5EF003F7925 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AF960C302923C5F7003F7925 /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AF960C3A2923CC6D003F7925 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AF960C432923D4D7003F7925 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AF960C3B2923D33F003F7925 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF960C3C2923D367003F7925 /* HighlightedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF960C3E2923D393003F7925 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */,
+				AF960C412923D408003F7925 /* UIFontExtension.swift */,
+				AF960C482923D57D003F7925 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AF960C432923D4D7003F7925 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AF960C442923D4F2003F7925 /* MainViewController.swift */,
+				AF960C452923D4F2003F7925 /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FDAFCD0A29220734009668A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +218,10 @@
 		FDCFC1012921BC4500852207 /* Jobplanet-test */ = {
 			isa = PBXGroup;
 			children = (
+				AF960C2B2923C5EF003F7925 /* Application */,
+				AF960C3A2923CC6D003F7925 /* Scenes */,
+				AF960C3B2923D33F003F7925 /* Views */,
+				AF960C3E2923D393003F7925 /* Extension */,
 				FDCFC1022921BC4500852207 /* AppDelegate.swift */,
 				FDCFC1042921BC4500852207 /* SceneDelegate.swift */,
 				FDCFC1062921BC4500852207 /* ViewController.swift */,
@@ -350,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
+				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,9 +438,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF960C312923C5F7003F7925 /* Application.swift in Sources */,
+				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
 				FDCFC1072921BC4500852207 /* ViewController.swift in Sources */,
+				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
 				FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */,
 				FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */,
+				AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */,
+				AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */,
+				AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF960C4A2923D5A4003F7925 /* UIViewExtension.swift in Sources */,
 				FDCFC1262921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift in Sources */,
 				FDCFC1242921BC4600852207 /* Jobplanet_testUITests.swift in Sources */,
 			);
