@@ -19,7 +19,6 @@
 		FDAFCD152922073C009668A9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
 		FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1042921BC4500852207 /* SceneDelegate.swift */; };
-		FDCFC1072921BC4500852207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1062921BC4500852207 /* ViewController.swift */; };
 		FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10B2921BC4600852207 /* Assets.xcassets */; };
 		FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10D2921BC4600852207 /* LaunchScreen.storyboard */; };
 		FDCFC11A2921BC4600852207 /* Jobplanet_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1192921BC4600852207 /* Jobplanet_testTests.swift */; };
@@ -35,6 +34,8 @@
 		FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA092924B06600495755 /* MainNavigator.swift */; };
 		FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */; };
 		FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA0E2924B62800495755 /* ObservableExtension.swift */; };
+		FDDBFA162924E42A00495755 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA142924E42A00495755 /* TagCell.swift */; };
+		FDDBFA172924E42A00495755 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDBFA152924E42A00495755 /* TagCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +110,6 @@
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1042921BC4500852207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDCFC1062921BC4500852207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDCFC10B2921BC4600852207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCFC10E2921BC4600852207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCFC1102921BC4600852207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +127,8 @@
 		FDDBFA092924B06600495755 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FDDBFA0E2924B62800495755 /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
+		FDDBFA142924E42A00495755 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagCell.swift; path = "Jobplanet-test/Views/TagCell.swift"; sourceTree = SOURCE_ROOT; };
+		FDDBFA152924E42A00495755 /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TagCell.xib; path = "Jobplanet-test/Views/TagCell.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,7 +250,6 @@
 				AF960C3E2923D393003F7925 /* Extension */,
 				FDCFC1022921BC4500852207 /* AppDelegate.swift */,
 				FDCFC1042921BC4500852207 /* SceneDelegate.swift */,
-				FDCFC1062921BC4500852207 /* ViewController.swift */,
 				FDCFC10B2921BC4600852207 /* Assets.xcassets */,
 				FDCFC10D2921BC4600852207 /* LaunchScreen.storyboard */,
 				FDCFC1102921BC4600852207 /* Info.plist */,
@@ -318,6 +319,8 @@
 		FDDBFA102924DCE300495755 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FDDBFA142924E42A00495755 /* TagCell.swift */,
+				FDDBFA152924E42A00495755 /* TagCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDBFA172924E42A00495755 /* TagCell.xib in Resources */,
 				FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */,
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
@@ -506,8 +510,8 @@
 			files = (
 				AF960C312923C5F7003F7925 /* Application.swift in Sources */,
 				FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */,
+				FDDBFA162924E42A00495755 /* TagCell.swift in Sources */,
 				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
-				FDCFC1072921BC4500852207 /* ViewController.swift in Sources */,
 				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
 				FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */,
 				FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */,
