@@ -11,7 +11,6 @@ import Domain
 protocol MainNavigatorType {
     func toRecruit()
     func toCompany()
-    func toRecruitDetail()
 }
 
 class MainNavigator: MainNavigatorType {
@@ -36,7 +35,10 @@ class MainNavigator: MainNavigatorType {
         
         removeChildViewController(mainViewController: mainViewController)
         
-        let vc = RecruitViewController()
+        let navigator = RecruitNavigator(navigationController: navigationController)
+        let viewModel = RecruitViewModel(useCase: services.makeRecruitsUseCase(), navigator: navigator)
+        let vc = RecruitViewController(viewModel: viewModel)
+        
         mainViewController.childViewController = vc
         mainViewController.addChild(vc)
         mainViewController.contaierView.addSubview(vc.view)

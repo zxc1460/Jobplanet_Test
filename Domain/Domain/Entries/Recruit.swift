@@ -11,7 +11,7 @@ public struct Recruit {
     public let id: Int
     public let title: String
     public let reward: Int
-    public let appeal: String
+    public let appeals: [String]
     public let imageURL: String
     public let company: Company
     
@@ -26,8 +26,17 @@ public struct Recruit {
         self.id = id
         self.title = title
         self.reward = reward
-        self.appeal = appeal
+        self.appeals = appeal
+            .replacingOccurrences(of: " ", with: "")
+            .components(separatedBy: ",")
+            .filter { !$0.isEmpty }
         self.imageURL = imageURL
         self.company = company
+    }
+    
+    public var averageRating: Double {
+        let count = company.ratings.count
+        
+        return company.ratings.map { $0.rating }.reduce(0, +) / Double(count)
     }
 }

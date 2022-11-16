@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3657C029251400000F91A6 /* TagCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657BF29251400000F91A6 /* TagCollectionViewFlowLayout.swift */; };
+		AF3657C52925146A000F91A6 /* RecruitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657C32925146A000F91A6 /* RecruitCell.swift */; };
+		AF3657C62925146A000F91A6 /* RecruitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3657C42925146A000F91A6 /* RecruitCell.xib */; };
+		AF3657C829251AA9000F91A6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657C729251AA9000F91A6 /* StringExtension.swift */; };
+		AF3657CB29251AF5000F91A6 /* RecruitCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */; };
+		AF3657CE29253B6B000F91A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AF3657CD29253B6B000F91A6 /* Kingfisher */; };
+		AF3657D029253D7F000F91A6 /* RecruitNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657CF29253D7F000F91A6 /* RecruitNavigator.swift */; };
+		AF3657D229253D87000F91A6 /* RecruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657D129253D87000F91A6 /* RecruitViewModel.swift */; };
 		AF960C312923C5F7003F7925 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C302923C5F7003F7925 /* Application.swift */; };
 		AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3C2923D367003F7925 /* HighlightedButton.swift */; };
 		AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */; };
@@ -99,6 +107,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF3657BF29251400000F91A6 /* TagCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		AF3657C32925146A000F91A6 /* RecruitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitCell.swift; sourceTree = "<group>"; };
+		AF3657C42925146A000F91A6 /* RecruitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitCell.xib; sourceTree = "<group>"; };
+		AF3657C729251AA9000F91A6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitCellViewModel.swift; sourceTree = "<group>"; };
+		AF3657CF29253D7F000F91A6 /* RecruitNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitNavigator.swift; sourceTree = "<group>"; };
+		AF3657D129253D87000F91A6 /* RecruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitViewModel.swift; sourceTree = "<group>"; };
 		AF960C302923C5F7003F7925 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		AF960C3C2923D367003F7925 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -127,8 +142,8 @@
 		FDDBFA092924B06600495755 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FDDBFA0E2924B62800495755 /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
-		FDDBFA142924E42A00495755 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagCell.swift; path = "Jobplanet-test/Views/TagCell.swift"; sourceTree = SOURCE_ROOT; };
-		FDDBFA152924E42A00495755 /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TagCell.xib; path = "Jobplanet-test/Views/TagCell.xib"; sourceTree = SOURCE_ROOT; };
+		FDDBFA142924E42A00495755 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagCell.swift; path = "Jobplanet-test/Views/Cell/TagCell.swift"; sourceTree = SOURCE_ROOT; };
+		FDDBFA152924E42A00495755 /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TagCell.xib; path = "Jobplanet-test/Views/Cell/TagCell.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3657CE29253B6B000F91A6 /* Kingfisher in Frameworks */,
 				FDAFCD142922073C009668A9 /* Domain.framework in Frameworks */,
 				FDCFC1E92922065700852207 /* NetworkPlatform.framework in Frameworks */,
 			);
@@ -158,6 +174,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3657BD292512D5000F91A6 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AF3657BF29251400000F91A6 /* TagCollectionViewFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		AF3657BE292512DA000F91A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF3657C929251AEA000F91A6 /* CellViewModel */,
+				FDDBFA142924E42A00495755 /* TagCell.swift */,
+				FDDBFA152924E42A00495755 /* TagCell.xib */,
+				AF3657C32925146A000F91A6 /* RecruitCell.swift */,
+				AF3657C42925146A000F91A6 /* RecruitCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AF3657C929251AEA000F91A6 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
 		AF960C2B2923C5EF003F7925 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,8 +223,8 @@
 		AF960C3B2923D33F003F7925 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FDDBFA112924DCE700495755 /* Layout */,
-				FDDBFA102924DCE300495755 /* Cell */,
+				AF3657BD292512D5000F91A6 /* Layout */,
+				AF3657BE292512DA000F91A6 /* Cell */,
 				AF960C3C2923D367003F7925 /* HighlightedButton.swift */,
 			);
 			path = Views;
@@ -193,6 +237,7 @@
 				AF960C412923D408003F7925 /* UIFontExtension.swift */,
 				AF960C482923D57D003F7925 /* UIViewExtension.swift */,
 				FDDBFA0E2924B62800495755 /* ObservableExtension.swift */,
+				AF3657C729251AA9000F91A6 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -295,6 +340,8 @@
 			children = (
 				FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */,
 				FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */,
+				AF3657CF29253D7F000F91A6 /* RecruitNavigator.swift */,
+				AF3657D129253D87000F91A6 /* RecruitViewModel.swift */,
 			);
 			path = Recruit;
 			sourceTree = "<group>";
@@ -316,22 +363,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		FDDBFA102924DCE300495755 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				FDDBFA142924E42A00495755 /* TagCell.swift */,
-				FDDBFA152924E42A00495755 /* TagCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		FDDBFA112924DCE700495755 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +380,9 @@
 			dependencies = (
 			);
 			name = "Jobplanet-test";
+			packageProductDependencies = (
+				AF3657CD29253B6B000F91A6 /* Kingfisher */,
+			);
 			productName = "Jobplanet-test";
 			productReference = FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */;
 			productType = "com.apple.product-type.application";
@@ -421,6 +455,9 @@
 				Base,
 			);
 			mainGroup = FDCFC0F62921BC4500852207;
+			packageReferences = (
+				AF3657CC29253B6B000F91A6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FDCFC1002921BC4500852207 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -482,6 +519,7 @@
 				FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */,
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
+				AF3657C62925146A000F91A6 /* RecruitCell.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
 				FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */,
 			);
@@ -510,6 +548,8 @@
 			files = (
 				AF960C312923C5F7003F7925 /* Application.swift in Sources */,
 				FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */,
+				AF3657D229253D87000F91A6 /* RecruitViewModel.swift in Sources */,
+				AF3657D029253D7F000F91A6 /* RecruitNavigator.swift in Sources */,
 				FDDBFA162924E42A00495755 /* TagCell.swift in Sources */,
 				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
 				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
@@ -522,7 +562,11 @@
 				AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */,
 				FDDBFA042924AF3600495755 /* CompanyViewController.swift in Sources */,
 				FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */,
+				AF3657C829251AA9000F91A6 /* StringExtension.swift in Sources */,
 				AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */,
+				AF3657C029251400000F91A6 /* TagCollectionViewFlowLayout.swift in Sources */,
+				AF3657C52925146A000F91A6 /* RecruitCell.swift in Sources */,
+				AF3657CB29251AF5000F91A6 /* RecruitCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +903,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF3657CC29253B6B000F91A6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF3657CD29253B6B000F91A6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3657CC29253B6B000F91A6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDCFC0F72921BC4500852207 /* Project object */;
 }

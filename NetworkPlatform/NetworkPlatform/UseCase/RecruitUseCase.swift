@@ -21,7 +21,7 @@ final class RecruitUseCase<Cache>: Domain.RecruitUseCase where Cache: Caching, C
     func recruits() -> Observable<[Recruit]> {
         return cache.fetch(key: network.cacheKey).asObservable()
             .debug()
-            .flatMap { response in
+            .flatMap { response -> Observable<[Recruit]> in
                 if let response = response {
                     return Observable.just(response.recruitItems.map { $0.asDomain() })
                 } else {

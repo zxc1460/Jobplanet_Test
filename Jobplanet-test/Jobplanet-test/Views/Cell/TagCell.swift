@@ -8,6 +8,8 @@
 import UIKit
 
 class TagCell: UICollectionViewCell {
+    
+    static let reuseIdentifier = "TagCell"
 
     @IBOutlet weak var titleLabel: UILabel!
     

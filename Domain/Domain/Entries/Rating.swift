@@ -8,8 +8,8 @@
 import Foundation
 
 public struct Rating {
-    let type: String
-    let rating: Double
+    public let type: String
+    public let rating: Double
     
     public init(type: String, rating: Double) {
         self.type = type

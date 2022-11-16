@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Company {
-    let name: String
-    let logoURL: String
-    let ratings: [Rating]
+    public let name: String
+    public let logoURL: String
+    public let ratings: [Rating]
     
     public init(name: String, logoURL: String, ratings: [Rating]) {
         self.name = name
