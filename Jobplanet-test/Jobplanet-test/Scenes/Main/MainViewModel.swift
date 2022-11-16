@@ -19,7 +19,7 @@ final class MainViewModel: ViewModelType {
     }
     
     struct Output {
-        let highlighted: Driver<TabType>
+        let selected: Driver<TabType>
     }
     
     private let navigator: MainNavigatorType
@@ -29,14 +29,23 @@ final class MainViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        let triggered = input.trigger.do(onNext: { self.navigator.toRecruit() } ).map { TabType.recruit }
+        let triggered = input.trigger.map { TabType.recruit }
         
-        let recruit = input.recruitTap.do(onNext: { self.navigator.toRecruit() } ).map { TabType.recruit }
+        let recruit = input.recruitTap.map { TabType.recruit }
         
-        let compnay = input.companyTap.do(onNext: { self.navigator.toCompany() } ).map { TabType.company }
+        let compnay = input.companyTap.map { TabType.company }
         
-        return Output(
-            highlighted: Driver.merge(triggered, recruit, compnay).distinctUntilChanged()
-        )
+        let selected = Driver.merge(triggered, recruit, compnay)
+            .distinctUntilChanged()
+            .do(onNext: { type in
+                switch type {
+                case .recruit:
+                    self.navigator.toRecruit()
+                case .company:
+                    self.navigator.toCompany()
+                }
+            })
+        
+        return Output(selected: selected)
     }
 }

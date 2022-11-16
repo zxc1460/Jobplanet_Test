@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
         
         let output = viewModel.transform(input: input)
         
-        output.highlighted
+        output.selected
             .do(onNext: self.highlightButton)
             .drive()
             .disposed(by: disposeBag)
