@@ -61,6 +61,9 @@ class RecruitCell: UICollectionViewCell {
         formatter.locale = Locale.current
         self.rewardLabel.text = "축하금: \(formatter.string(from: NSNumber(value: viewModel.recruit.reward)) ?? "")원"
         
+        self.rewardLabel.isHidden = viewModel.recruit.reward == 0
+        self.tagCollectionView.isHidden = viewModel.recruit.appeals.isEmpty
+        
         tagCollectionView.reloadData()
     }
 }
