@@ -27,6 +27,14 @@
 		FDCFC1262921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */; };
 		FDCFC1E92922065700852207 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; };
 		FDCFC1EA2922065700852207 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDBFA002924AF2D00495755 /* RecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */; };
+		FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */; };
+		FDDBFA042924AF3600495755 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA022924AF3600495755 /* CompanyViewController.swift */; };
+		FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDBFA032924AF3600495755 /* CompanyViewController.xib */; };
+		FDDBFA082924B03700495755 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA072924B03700495755 /* ViewModelType.swift */; };
+		FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA092924B06600495755 /* MainNavigator.swift */; };
+		FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */; };
+		FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA0E2924B62800495755 /* ObservableExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +119,14 @@
 		FDCFC1232921BC4600852207 /* Jobplanet_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITests.swift; sourceTree = "<group>"; };
 		FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkPlatform.xcodeproj; path = ../NetworkPlatform/NetworkPlatform.xcodeproj; sourceTree = "<group>"; };
+		FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitViewController.swift; sourceTree = "<group>"; };
+		FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitViewController.xib; sourceTree = "<group>"; };
+		FDDBFA022924AF3600495755 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		FDDBFA032924AF3600495755 /* CompanyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyViewController.xib; sourceTree = "<group>"; };
+		FDDBFA072924B03700495755 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		FDDBFA092924B06600495755 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FDDBFA0E2924B62800495755 /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				AF960C432923D4D7003F7925 /* Main */,
+				FDDBF9F82924AF0A00495755 /* Recruit */,
+				FDDBF9FD2924AF1000495755 /* Company */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -159,6 +177,8 @@
 		AF960C3B2923D33F003F7925 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDDBFA112924DCE700495755 /* Layout */,
+				FDDBFA102924DCE300495755 /* Cell */,
 				AF960C3C2923D367003F7925 /* HighlightedButton.swift */,
 			);
 			path = Views;
@@ -170,6 +190,7 @@
 				AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */,
 				AF960C412923D408003F7925 /* UIFontExtension.swift */,
 				AF960C482923D57D003F7925 /* UIViewExtension.swift */,
+				FDDBFA0E2924B62800495755 /* ObservableExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -179,6 +200,8 @@
 			children = (
 				AF960C442923D4F2003F7925 /* MainViewController.swift */,
 				AF960C452923D4F2003F7925 /* MainViewController.xib */,
+				FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */,
+				FDDBFA092924B06600495755 /* MainNavigator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -219,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				AF960C2B2923C5EF003F7925 /* Application */,
+				FDDBFA062924AFA700495755 /* Common */,
 				AF960C3A2923CC6D003F7925 /* Scenes */,
 				AF960C3B2923D33F003F7925 /* Views */,
 				AF960C3E2923D393003F7925 /* Extension */,
@@ -263,6 +287,46 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDDBF9F82924AF0A00495755 /* Recruit */ = {
+			isa = PBXGroup;
+			children = (
+				FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */,
+				FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */,
+			);
+			path = Recruit;
+			sourceTree = "<group>";
+		};
+		FDDBF9FD2924AF1000495755 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				FDDBFA022924AF3600495755 /* CompanyViewController.swift */,
+				FDDBFA032924AF3600495755 /* CompanyViewController.xib */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
+		FDDBFA062924AFA700495755 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FDDBFA072924B03700495755 /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FDDBFA102924DCE300495755 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FDDBFA112924DCE700495755 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,9 +475,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */,
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
+				FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,13 +505,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF960C312923C5F7003F7925 /* Application.swift in Sources */,
+				FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */,
 				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
 				FDCFC1072921BC4500852207 /* ViewController.swift in Sources */,
 				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
 				FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */,
 				FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */,
 				AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */,
+				FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */,
+				FDDBFA002924AF2D00495755 /* RecruitViewController.swift in Sources */,
+				FDDBFA082924B03700495755 /* ViewModelType.swift in Sources */,
 				AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */,
+				FDDBFA042924AF3600495755 /* CompanyViewController.swift in Sources */,
+				FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */,
 				AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Jobplanet_test" customModuleProvider="target">
             <connections>
+                <outlet property="companyButon" destination="oUU-2i-H6A" id="pCQ-od-S4g"/>
+                <outlet property="contaierView" destination="Def-fE-bPP" id="vWe-BK-1cw"/>
+                <outlet property="recruitButton" destination="xVu-G4-JyI" id="qm9-4d-hXE"/>
+                <outlet property="searchTextField" destination="cx1-2c-T3S" id="ntg-uA-Q6c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olh-yi-8cq" userLabel="SearchView">
-                    <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="52"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d65-vM-nZc" userLabel="SearchBorderView">
                             <rect key="frame" x="0.0" y="51" width="414" height="1"/>
@@ -58,19 +63,95 @@
                         <constraint firstAttribute="trailing" secondItem="d65-vM-nZc" secondAttribute="trailing" id="rOd-hn-pSO"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85E-JD-ZkQ" userLabel="TabView">
+                    <rect key="frame" x="0.0" y="100" width="414" height="62"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVu-G4-JyI" customClass="HighlightedButton" customModule="Jobplanet_test" customModuleProvider="target">
+                            <rect key="frame" x="20" y="16" width="50" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="LoU-ps-czH"/>
+                                <constraint firstAttribute="height" constant="30" id="k4R-fm-9Sq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                            <color key="tintColor" name="jpGray01"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="채용"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                    <color key="value" name="jpGray03"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-2i-H6A" customClass="HighlightedButton" customModule="Jobplanet_test" customModuleProvider="target">
+                            <rect key="frame" x="78" y="16" width="50" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="1tk-ZQ-TCp"/>
+                                <constraint firstAttribute="height" constant="30" id="5EV-pP-4pO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                            <color key="tintColor" name="jpGray01"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="기업"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                    <color key="value" name="jpGray03"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xVu-G4-JyI" firstAttribute="centerY" secondItem="85E-JD-ZkQ" secondAttribute="centerY" id="A9r-lk-bBZ"/>
+                        <constraint firstItem="xVu-G4-JyI" firstAttribute="leading" secondItem="85E-JD-ZkQ" secondAttribute="leading" constant="20" id="GSo-to-41w"/>
+                        <constraint firstAttribute="height" constant="62" id="ham-3e-WSx"/>
+                        <constraint firstItem="oUU-2i-H6A" firstAttribute="centerY" secondItem="85E-JD-ZkQ" secondAttribute="centerY" id="mAd-ip-JI8"/>
+                        <constraint firstItem="oUU-2i-H6A" firstAttribute="leading" secondItem="xVu-G4-JyI" secondAttribute="trailing" constant="8" id="vvl-2N-dXH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Def-fE-bPP" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="162" width="414" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="olh-yi-8cq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F0P-xM-Mlk"/>
+                <constraint firstItem="Def-fE-bPP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Imj-MJ-fQg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Def-fE-bPP" secondAttribute="trailing" id="Kyv-mH-JD6"/>
                 <constraint firstItem="olh-yi-8cq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OcT-hi-le6"/>
+                <constraint firstItem="85E-JD-ZkQ" firstAttribute="top" secondItem="olh-yi-8cq" secondAttribute="bottom" id="WNe-vr-LUr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="olh-yi-8cq" secondAttribute="trailing" id="bJg-aN-qly"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="85E-JD-ZkQ" secondAttribute="trailing" id="qAQ-U2-TbV"/>
+                <constraint firstItem="85E-JD-ZkQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qP6-rX-CZJ"/>
+                <constraint firstAttribute="bottom" secondItem="Def-fE-bPP" secondAttribute="bottom" id="uRE-R1-GWz"/>
+                <constraint firstItem="Def-fE-bPP" firstAttribute="top" secondItem="85E-JD-ZkQ" secondAttribute="bottom" id="xqo-d8-gnw"/>
             </constraints>
             <point key="canvasLocation" x="139" y="135"/>
         </view>
     </objects>
     <resources>
         <image name="img_logo_search" width="24" height="24"/>
+        <namedColor name="jpGray01">
+            <color red="0.19607843137254902" green="0.20392156862745098" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="jpGray03">
+            <color red="0.89803921568627454" green="0.90196078431372551" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="jpGreen">
             <color red="0.0" green="0.76499998569488525" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
