@@ -34,9 +34,7 @@ public struct Recruit {
         self.company = company
     }
     
-    public var averageRating: Double {
-        let count = company.ratings.count
-        
-        return company.ratings.map { $0.rating }.reduce(0, +) / Double(count)
+    public var highestRating: Double {
+        return company.ratings.map { $0.rating }.sorted(by: >).first ?? .zero
     }
 }

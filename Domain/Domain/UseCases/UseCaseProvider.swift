@@ -9,4 +9,5 @@ import Foundation
 
 public protocol UseCaseProvider {
     func makeRecruitsUseCase() -> RecruitUseCase
+    func makeCellUseCase() -> CellUseCase
 }

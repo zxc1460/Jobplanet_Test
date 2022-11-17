@@ -21,4 +21,10 @@ final class NetworkProvider {
         
         return RecruitsNetwork(network: network)
     }
+    
+    func makeCellNetwork() -> CellNetwork {
+        let network = Network<CellResponse>(endPoint: cellItemEndPoint)
+        
+        return CellNetwork(network: network)
+    }
 }

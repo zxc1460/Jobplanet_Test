@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Jobplanet_test" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="oGl-LZ-BQM" id="XiL-wG-75c"/>
                 <outlet property="companyButon" destination="oUU-2i-H6A" id="pCQ-od-S4g"/>
                 <outlet property="contaierView" destination="Def-fE-bPP" id="vWe-BK-1cw"/>
                 <outlet property="recruitButton" destination="xVu-G4-JyI" id="qm9-4d-hXE"/>
@@ -126,6 +127,9 @@
                     <rect key="frame" x="0.0" y="162" width="414" height="734"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="oGl-LZ-BQM">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,7 +137,9 @@
                 <constraint firstItem="olh-yi-8cq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F0P-xM-Mlk"/>
                 <constraint firstItem="Def-fE-bPP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Imj-MJ-fQg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Def-fE-bPP" secondAttribute="trailing" id="Kyv-mH-JD6"/>
+                <constraint firstItem="oGl-LZ-BQM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Msd-Rg-Jiy"/>
                 <constraint firstItem="olh-yi-8cq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OcT-hi-le6"/>
+                <constraint firstItem="oGl-LZ-BQM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SOg-wm-34X"/>
                 <constraint firstItem="85E-JD-ZkQ" firstAttribute="top" secondItem="olh-yi-8cq" secondAttribute="bottom" id="WNe-vr-LUr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="olh-yi-8cq" secondAttribute="trailing" id="bJg-aN-qly"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="85E-JD-ZkQ" secondAttribute="trailing" id="qAQ-U2-TbV"/>

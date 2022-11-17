@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -104,14 +105,24 @@
                             <constraint firstItem="LBJ-ph-FYb" firstAttribute="top" secondItem="fng-mY-Ul3" secondAttribute="top" id="zIp-5U-YcB"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I5-Ga-CZV">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="337"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="5I5-Ga-CZV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6p6-iP-tb3"/>
                 <constraint firstAttribute="trailing" secondItem="fng-mY-Ul3" secondAttribute="trailing" id="AX5-CZ-Nej"/>
+                <constraint firstAttribute="trailing" secondItem="5I5-Ga-CZV" secondAttribute="trailing" id="GS2-IF-Kvd"/>
                 <constraint firstItem="fng-mY-Ul3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P48-B1-cR9"/>
+                <constraint firstAttribute="bottom" secondItem="5I5-Ga-CZV" secondAttribute="bottom" id="ZvF-XJ-V7u"/>
                 <constraint firstItem="fng-mY-Ul3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pOB-VW-t2g"/>
                 <constraint firstAttribute="bottom" secondItem="fng-mY-Ul3" secondAttribute="bottom" id="qMR-Eg-tNX"/>
+                <constraint firstItem="5I5-Ga-CZV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rmr-Pu-VFh"/>
             </constraints>
             <size key="customSize" width="240" height="337"/>
             <connections>
@@ -119,6 +130,7 @@
                 <outlet property="imageView" destination="LBJ-ph-FYb" id="zUM-SH-Icl"/>
                 <outlet property="ratingLabel" destination="Gll-Dl-VYH" id="nNR-VF-FFv"/>
                 <outlet property="rewardLabel" destination="jgq-Tz-IAj" id="Krz-1x-M4J"/>
+                <outlet property="selectButton" destination="5I5-Ga-CZV" id="7NZ-tU-4P7"/>
                 <outlet property="tagCollectionView" destination="gjt-Xu-dKs" id="lEi-F4-ktv"/>
                 <outlet property="titleLabel" destination="v5F-eL-tlx" id="rcA-QM-l6e"/>
             </connections>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecruitViewController" customModule="Jobplanet_test" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="PZA-Xw-mmf" id="Kbd-IY-zbS"/>
+                <outlet property="emptyView" destination="Wrx-Vy-2NK" id="qbg-FT-YWk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PZA-Xw-mmf">
-                    <rect key="frame" x="2" y="0.0" width="390" height="844"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PZA-Xw-mmf">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dUW-zR-Nu4">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,11 +31,31 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-Vy-2NK">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3P-aV-Ede">
+                            <rect key="frame" x="137.66666666666666" y="310" width="115" height="24"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="h3P-aV-Ede" firstAttribute="centerY" secondItem="Wrx-Vy-2NK" secondAttribute="centerY" constant="-100" id="4xt-p3-gfQ"/>
+                        <constraint firstItem="h3P-aV-Ede" firstAttribute="centerX" secondItem="Wrx-Vy-2NK" secondAttribute="centerX" id="A0q-z4-OKB"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PZA-Xw-mmf" secondAttribute="trailing" id="7E9-20-aSK"/>
+                <constraint firstAttribute="bottom" secondItem="Wrx-Vy-2NK" secondAttribute="bottom" id="7Sd-I1-6ft"/>
+                <constraint firstItem="Wrx-Vy-2NK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9yW-X2-iUX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wrx-Vy-2NK" secondAttribute="trailing" id="EDb-Xl-PTT"/>
+                <constraint firstItem="Wrx-Vy-2NK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HzY-gg-Gdc"/>
                 <constraint firstItem="PZA-Xw-mmf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pa4-eR-tG0"/>
                 <constraint firstItem="PZA-Xw-mmf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W6G-RP-tIh"/>
                 <constraint firstAttribute="bottom" secondItem="PZA-Xw-mmf" secondAttribute="bottom" id="iJI-8z-MJQ"/>

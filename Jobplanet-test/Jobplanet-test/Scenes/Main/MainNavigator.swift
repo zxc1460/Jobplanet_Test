@@ -53,15 +53,15 @@ class MainNavigator: MainNavigatorType {
         
         removeChildViewController(mainViewController: mainViewController)
         
-        let vc = CompanyViewController()
+        let navigator = CompanyNavigator(navigationController: navigationController)
+        let viewModel = CompanyViewModel(useCase: services.makeCellUseCase(), navigator: navigator)
+        let vc = CompanyViewController(viewModel: viewModel)
+        
         mainViewController.childViewController = vc
         mainViewController.addChild(vc)
         mainViewController.contaierView.addSubview(vc.view)
         vc.view.frame = mainViewController.contaierView.bounds
         vc.didMove(toParent: mainViewController)
-    }
-    
-    func toRecruitDetail() {
     }
     
     private func removeChildViewController(mainViewController: MainViewController) {

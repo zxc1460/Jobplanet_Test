@@ -25,6 +25,15 @@
 		AF960C4A2923D5A4003F7925 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C482923D57D003F7925 /* UIViewExtension.swift */; };
 		FDAFCD142922073C009668A9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; };
 		FDAFCD152922073C009668A9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCD0F29220734009668A9 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDCA85982925BBEB00F274FB /* FetchingTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85972925BBEB00F274FB /* FetchingTracker.swift */; };
+		FDCA859D2925CE4700F274FB /* RecruitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA859B2925CE4700F274FB /* RecruitDetailViewController.swift */; };
+		FDCA859E2925CE4700F274FB /* RecruitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA859C2925CE4700F274FB /* RecruitDetailViewController.xib */; };
+		FDCA85B82925F7C000F274FB /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85B62925F7C000F274FB /* CompanyViewController.swift */; };
+		FDCA85B92925F7C000F274FB /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85B72925F7C000F274FB /* CompanyViewController.xib */; };
+		FDCA85BB2925F81500F274FB /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BA2925F81500F274FB /* CompanyViewModel.swift */; };
+		FDCA85BD2925F81C00F274FB /* CompanyNavigatoir.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */; };
+		FDCA85C729262D0400F274FB /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85C529262D0400F274FB /* CompanyCell.swift */; };
+		FDCA85C829262D0400F274FB /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85C629262D0400F274FB /* CompanyCell.xib */; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
 		FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1042921BC4500852207 /* SceneDelegate.swift */; };
 		FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10B2921BC4600852207 /* Assets.xcassets */; };
@@ -34,10 +43,10 @@
 		FDCFC1262921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */; };
 		FDCFC1E92922065700852207 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; };
 		FDCFC1EA2922065700852207 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCFC1E52922063F00852207 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDD9A99629263B3400DDEE0C /* RecruitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9A99429263B3400DDEE0C /* RecruitListCell.swift */; };
+		FDD9A99729263B3400DDEE0C /* RecruitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD9A99529263B3400DDEE0C /* RecruitListCell.xib */; };
 		FDDBFA002924AF2D00495755 /* RecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */; };
 		FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */; };
-		FDDBFA042924AF3600495755 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA022924AF3600495755 /* CompanyViewController.swift */; };
-		FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDBFA032924AF3600495755 /* CompanyViewController.xib */; };
 		FDDBFA082924B03700495755 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA072924B03700495755 /* ViewModelType.swift */; };
 		FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA092924B06600495755 /* MainNavigator.swift */; };
 		FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */; };
@@ -122,6 +131,15 @@
 		AF960C452923D4F2003F7925 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AF960C482923D57D003F7925 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FDAFCD0929220734009668A9 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
+		FDCA85972925BBEB00F274FB /* FetchingTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingTracker.swift; sourceTree = "<group>"; };
+		FDCA859B2925CE4700F274FB /* RecruitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitDetailViewController.swift; sourceTree = "<group>"; };
+		FDCA859C2925CE4700F274FB /* RecruitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitDetailViewController.xib; sourceTree = "<group>"; };
+		FDCA85B62925F7C000F274FB /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		FDCA85B72925F7C000F274FB /* CompanyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyViewController.xib; sourceTree = "<group>"; };
+		FDCA85BA2925F81500F274FB /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
+		FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNavigatoir.swift; sourceTree = "<group>"; };
+		FDCA85C529262D0400F274FB /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
+		FDCA85C629262D0400F274FB /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1042921BC4500852207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,10 +152,10 @@
 		FDCFC1232921BC4600852207 /* Jobplanet_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITests.swift; sourceTree = "<group>"; };
 		FDCFC1252921BC4600852207 /* Jobplanet_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobplanet_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FDCFC1DF2922063F00852207 /* NetworkPlatform.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkPlatform.xcodeproj; path = ../NetworkPlatform/NetworkPlatform.xcodeproj; sourceTree = "<group>"; };
+		FDD9A99429263B3400DDEE0C /* RecruitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitListCell.swift; sourceTree = "<group>"; };
+		FDD9A99529263B3400DDEE0C /* RecruitListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitListCell.xib; sourceTree = "<group>"; };
 		FDDBF9FE2924AF2D00495755 /* RecruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitViewController.swift; sourceTree = "<group>"; };
 		FDDBF9FF2924AF2D00495755 /* RecruitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitViewController.xib; sourceTree = "<group>"; };
-		FDDBFA022924AF3600495755 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
-		FDDBFA032924AF3600495755 /* CompanyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyViewController.xib; sourceTree = "<group>"; };
 		FDDBFA072924B03700495755 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		FDDBFA092924B06600495755 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		FDDBFA0C2924B1DB00495755 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -185,21 +203,10 @@
 		AF3657BE292512DA000F91A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AF3657C929251AEA000F91A6 /* CellViewModel */,
 				FDDBFA142924E42A00495755 /* TagCell.swift */,
 				FDDBFA152924E42A00495755 /* TagCell.xib */,
-				AF3657C32925146A000F91A6 /* RecruitCell.swift */,
-				AF3657C42925146A000F91A6 /* RecruitCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		AF3657C929251AEA000F91A6 /* CellViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */,
-			);
-			path = CellViewModel;
 			sourceTree = "<group>";
 		};
 		AF960C2B2923C5EF003F7925 /* Application */ = {
@@ -215,7 +222,11 @@
 			children = (
 				AF960C432923D4D7003F7925 /* Main */,
 				FDDBF9F82924AF0A00495755 /* Recruit */,
+				FDCA859A2925CE2B00F274FB /* RecruitDetail */,
+				FDCA85992925C16500F274FB /* RecruitCell */,
 				FDDBF9FD2924AF1000495755 /* Company */,
+				FDCA85C429262CE900F274FB /* CompanyCell */,
+				FDD9A99329263B1F00DDEE0C /* RecruitListCell */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -260,6 +271,34 @@
 				FDAFCD1129220734009668A9 /* DomainTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FDCA85992925C16500F274FB /* RecruitCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */,
+				AF3657C32925146A000F91A6 /* RecruitCell.swift */,
+				AF3657C42925146A000F91A6 /* RecruitCell.xib */,
+			);
+			path = RecruitCell;
+			sourceTree = "<group>";
+		};
+		FDCA859A2925CE2B00F274FB /* RecruitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA859B2925CE4700F274FB /* RecruitDetailViewController.swift */,
+				FDCA859C2925CE4700F274FB /* RecruitDetailViewController.xib */,
+			);
+			path = RecruitDetail;
+			sourceTree = "<group>";
+		};
+		FDCA85C429262CE900F274FB /* CompanyCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA85C529262D0400F274FB /* CompanyCell.swift */,
+				FDCA85C629262D0400F274FB /* CompanyCell.xib */,
+			);
+			path = CompanyCell;
 			sourceTree = "<group>";
 		};
 		FDCFC0F62921BC4500852207 = {
@@ -335,6 +374,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FDD9A99329263B1F00DDEE0C /* RecruitListCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDD9A99429263B3400DDEE0C /* RecruitListCell.swift */,
+				FDD9A99529263B3400DDEE0C /* RecruitListCell.xib */,
+			);
+			path = RecruitListCell;
+			sourceTree = "<group>";
+		};
 		FDDBF9F82924AF0A00495755 /* Recruit */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,8 +397,10 @@
 		FDDBF9FD2924AF1000495755 /* Company */ = {
 			isa = PBXGroup;
 			children = (
-				FDDBFA022924AF3600495755 /* CompanyViewController.swift */,
-				FDDBFA032924AF3600495755 /* CompanyViewController.xib */,
+				FDCA85B62925F7C000F274FB /* CompanyViewController.swift */,
+				FDCA85B72925F7C000F274FB /* CompanyViewController.xib */,
+				FDCA85BA2925F81500F274FB /* CompanyViewModel.swift */,
+				FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -359,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				FDDBFA072924B03700495755 /* ViewModelType.swift */,
+				FDCA85972925BBEB00F274FB /* FetchingTracker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -515,11 +566,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA85B92925F7C000F274FB /* CompanyViewController.xib in Resources */,
+				FDCA859E2925CE4700F274FB /* RecruitDetailViewController.xib in Resources */,
+				FDD9A99729263B3400DDEE0C /* RecruitListCell.xib in Resources */,
 				FDDBFA172924E42A00495755 /* TagCell.xib in Resources */,
-				FDDBFA052924AF3600495755 /* CompanyViewController.xib in Resources */,
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
 				AF3657C62925146A000F91A6 /* RecruitCell.xib in Resources */,
+				FDCA85C829262D0400F274FB /* CompanyCell.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
 				FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */,
 			);
@@ -548,25 +602,31 @@
 			files = (
 				AF960C312923C5F7003F7925 /* Application.swift in Sources */,
 				FDDBFA0F2924B62800495755 /* ObservableExtension.swift in Sources */,
+				FDCA85BD2925F81C00F274FB /* CompanyNavigatoir.swift in Sources */,
 				AF3657D229253D87000F91A6 /* RecruitViewModel.swift in Sources */,
 				AF3657D029253D7F000F91A6 /* RecruitNavigator.swift in Sources */,
+				FDCA85B82925F7C000F274FB /* CompanyViewController.swift in Sources */,
 				FDDBFA162924E42A00495755 /* TagCell.swift in Sources */,
 				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
+				FDCA85982925BBEB00F274FB /* FetchingTracker.swift in Sources */,
+				FDCA85C729262D0400F274FB /* CompanyCell.swift in Sources */,
 				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
 				FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */,
 				FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */,
 				AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */,
+				FDCA85BB2925F81500F274FB /* CompanyViewModel.swift in Sources */,
 				FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */,
 				FDDBFA002924AF2D00495755 /* RecruitViewController.swift in Sources */,
 				FDDBFA082924B03700495755 /* ViewModelType.swift in Sources */,
 				AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */,
-				FDDBFA042924AF3600495755 /* CompanyViewController.swift in Sources */,
 				FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */,
+				FDCA859D2925CE4700F274FB /* RecruitDetailViewController.swift in Sources */,
 				AF3657C829251AA9000F91A6 /* StringExtension.swift in Sources */,
 				AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */,
 				AF3657C029251400000F91A6 /* TagCollectionViewFlowLayout.swift in Sources */,
 				AF3657C52925146A000F91A6 /* RecruitCell.swift in Sources */,
 				AF3657CB29251AF5000F91A6 /* RecruitCellViewModel.swift in Sources */,
+				FDD9A99629263B3400DDEE0C /* RecruitListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

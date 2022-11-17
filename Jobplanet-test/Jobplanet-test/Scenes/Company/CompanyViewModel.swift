@@ -1,8 +1,8 @@
 //
-//  RecruitViewModel.swift
+//  CompanyViewModel.swift
 //  Jobplanet-test
 //
-//  Created by Seok on 2022/11/17.
+//  Created by DoHyeong on 2022/11/17.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Domain
 import RxCocoa
 import RxSwift
 
-final class RecruitViewModel: ViewModelType {
+final class CompanyViewModel: ViewModelType {
     struct Input {
         let trigger: Driver<Void>
         let search: Driver<String>
@@ -18,14 +18,14 @@ final class RecruitViewModel: ViewModelType {
     
     struct Output {
         let fetching: Driver<Bool>
-        let items: Driver<[RecruitCellViewModel]>
+        let items: Driver<[CellType]>
         let itemIsEmpty: Driver<Bool>
     }
     
-    private let useCase: RecruitUseCase
-    private let navigator: RecruitNavigatorType
+    private let useCase: CellUseCase
+    private let navigator: CompanyNavigatorType
     
-    init(useCase: RecruitUseCase, navigator: RecruitNavigatorType) {
+    init(useCase: CellUseCase, navigator: CompanyNavigatorType) {
         self.useCase = useCase
         self.navigator = navigator
     }
@@ -36,17 +36,11 @@ final class RecruitViewModel: ViewModelType {
         let items = Driver.merge(input.trigger.map { String() }, input.search)
             .distinctUntilChanged()
             .trackFetchinfg(fetchingTracker)
-            .flatMapLatest { keyword -> Observable<[RecruitCellViewModel]> in
+            .flatMapLatest { keyword -> Observable<[CellType]> in
                 if keyword.isEmpty {
-                    return self.useCase.recruits()
-                        .map { recruits -> [RecruitCellViewModel] in
-                            return recruits.map { .init(with: $0, navigator: self.navigator) }
-                        }
+                    return self.useCase.cells()
                 } else {
                     return self.useCase.search(keyword: keyword)
-                        .map { recruits -> [RecruitCellViewModel] in
-                            return recruits.map { .init(with: $0, navigator: self.navigator) }
-                        }
                 }
             }
             .asDriverOnErrorJustComplete()

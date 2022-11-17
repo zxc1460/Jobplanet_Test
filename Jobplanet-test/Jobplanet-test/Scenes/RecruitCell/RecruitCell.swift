@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Kingfisher
+import RxSwift
 
 class RecruitCell: UICollectionViewCell {
     
@@ -19,6 +20,9 @@ class RecruitCell: UICollectionViewCell {
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var rewardLabel: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
+    
+    private var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,7 +57,7 @@ class RecruitCell: UICollectionViewCell {
         }
         
         self.titleLabel.text = viewModel.recruit.title
-        self.ratingLabel.text = String(format: "%.1f", viewModel.recruit.averageRating)
+        self.ratingLabel.text = String(format: "%.1f", viewModel.recruit.highestRating)
         self.companyLabel.text = viewModel.recruit.company.name
         
         let formatter = NumberFormatter()
@@ -65,6 +69,20 @@ class RecruitCell: UICollectionViewCell {
         self.tagCollectionView.isHidden = viewModel.recruit.appeals.isEmpty
         
         tagCollectionView.reloadData()
+        
+        let select = selectButton.rx.tap.asDriver()
+        
+        let output = viewModel.transform(input: .init(select: select))
+        
+        output.selectedRecruit
+            .drive()
+            .disposed(by: disposeBag)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.disposeBag = DisposeBag()
     }
 }
 

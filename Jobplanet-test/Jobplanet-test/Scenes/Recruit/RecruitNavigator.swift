@@ -10,7 +10,7 @@ import UIKit
 import Domain
 
 protocol RecruitNavigatorType {
-    func toRecruitDetail()
+    func toRecruitDetail(_ recruit: Recruit)
 }
 
 class RecruitNavigator: RecruitNavigatorType {
@@ -20,6 +20,7 @@ class RecruitNavigator: RecruitNavigatorType {
         self.navigationController = navigationController
     }
     
-    func toRecruitDetail() {
+    func toRecruitDetail(_ recruit: Recruit) {
+        print("디테일로 이동 \(recruit.title)")
     }
 }

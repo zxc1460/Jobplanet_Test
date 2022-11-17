@@ -12,6 +12,7 @@ import RxCocoa
 class RecruitViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyView: UIView!
     
     let viewModel: RecruitViewModel
     private let disposeBag = DisposeBag()
@@ -48,15 +49,30 @@ class RecruitViewController: UIViewController {
         
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: "RecruitCell", bundle: nil), forCellWithReuseIdentifier: RecruitCell.reuseIdentifier)
+        
+        collectionView.allowsSelection = false
     }
     
     private func bindViewModel() {
+        guard let parentViewController = self.parent as? MainViewController else {
+            return
+        }
+        
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
             .mapToVoid()
             .asDriverOnErrorJustComplete()
             .asDriver()
         
-        let input = RecruitViewModel.Input(trigger: viewWillAppear)
+        let search = parentViewController.searchTextField.rx.controlEvent(.editingDidEndOnExit)
+            .map {
+                return parentViewController.searchTextField.text
+            }
+            .compactMap { $0 }
+            .do(onNext: { _ in parentViewController.searchTextField.resignFirstResponder() })
+            .asDriverOnErrorJustComplete()
+            
+        
+        let input = RecruitViewModel.Input(trigger: viewWillAppear, search: search)
         
         let output = viewModel.transform(input: input)
         
@@ -66,5 +82,14 @@ class RecruitViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
+        output.fetching
+            .map { !$0 }
+            .drive(parentViewController.activityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        output.itemIsEmpty
+            .map { !$0 }
+            .drive(emptyView.rx.isHidden)
+            .disposed(by: disposeBag)
     }
 }

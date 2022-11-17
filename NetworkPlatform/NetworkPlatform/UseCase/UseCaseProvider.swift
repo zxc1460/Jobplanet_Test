@@ -18,4 +18,8 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
     public func makeRecruitsUseCase() -> Domain.RecruitUseCase {
         return RecruitUseCase(network: networkProvider.makeRecruitsNetwork(), cache: Cache<String, RecruitResponse>())
     }
+    
+    public func makeCellUseCase() -> Domain.CellUseCase {
+        return CellUseCase(network: networkProvider.makeCellNetwork(), cache: Cache<String, CellResponse>())
+    }
 }

@@ -48,11 +48,10 @@ final class Network<T: Decodable> {
         
         return RxAlamofire
             .data(.get, absolutePath)
-            .debug()
             .observe(on: scheduler)
             .map { data -> T in
                 let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
+                decoder.dateDecodingStrategy = .custom(CustomDateDecodingStrategy.decode)
                 
                 return try decoder.decode(T.self, from: data)
             }

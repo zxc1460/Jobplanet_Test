@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var recruitButton: HighlightedButton!
     @IBOutlet weak var companyButon: HighlightedButton!
     @IBOutlet weak var contaierView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var childViewController: UIViewController?
     
@@ -38,6 +39,8 @@ class MainViewController: UIViewController {
         recruitButton.setTitleColor(.white, for: .selected)
         companyButon.setTitleColor(.jpGray01, for: .normal)
         companyButon.setTitleColor(.white, for: .selected)
+        
+        activityIndicator.startAnimating()
     }
     
     private func bindViewModel() {

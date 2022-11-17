@@ -20,7 +20,6 @@ final class RecruitUseCase<Cache>: Domain.RecruitUseCase where Cache: Caching, C
     
     func recruits() -> Observable<[Recruit]> {
         return cache.fetch(key: network.cacheKey).asObservable()
-            .debug()
             .flatMap { response -> Observable<[Recruit]> in
                 if let response = response {
                     return Observable.just(response.recruitItems.map { $0.asDomain() })
@@ -28,7 +27,6 @@ final class RecruitUseCase<Cache>: Domain.RecruitUseCase where Cache: Caching, C
                     return self.network.fetchRecruits()
                         .flatMap { response in
                             self.cache.save(key: self.network.cacheKey, value: response)
-                                .debug()
                                 .asObservable()
                                 .flatMap { _ in
                                     return Observable.just(response)
@@ -42,9 +40,11 @@ final class RecruitUseCase<Cache>: Domain.RecruitUseCase where Cache: Caching, C
     }
     
     func search(keyword: String) -> Observable<[Recruit]> {
+        let keyword = keyword.lowercased().replacingOccurrences(of: " ", with: "")
+        
         return recruits()
             .map { recruits in
-                return recruits.filter { $0.title == keyword }
+                return recruits.filter { $0.title.lowercased().replacingOccurrences(of: " ", with: "").contains(keyword) }
             }
     }
 }

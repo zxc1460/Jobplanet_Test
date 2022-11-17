@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecruitListCell" rowHeight="298" id="KGk-i7-Jjw" customClass="RecruitListCell" customModule="Jobplanet_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="625" height="298"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="625" height="298"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 급상승 채용 공고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk0-cf-dB2">
+                        <rect key="frame" x="20" y="11" width="605" height="30"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                        <color key="textColor" name="jpGray01"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jUd-uX-hUq">
+                        <rect key="frame" x="20" y="57" width="585" height="230"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="230" id="onf-xA-Hrf"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XOL-q3-fCw">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="jUd-uX-hUq" secondAttribute="bottom" id="75y-ue-pUa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jUd-uX-hUq" secondAttribute="trailing" id="B7Z-Nt-bO7"/>
+                    <constraint firstItem="jUd-uX-hUq" firstAttribute="top" secondItem="Wk0-cf-dB2" secondAttribute="bottom" constant="16" id="I5F-ix-kSO"/>
+                    <constraint firstAttribute="trailing" secondItem="Wk0-cf-dB2" secondAttribute="trailing" id="kyb-t3-0pp"/>
+                    <constraint firstItem="Wk0-cf-dB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="nhP-u2-Ijn"/>
+                    <constraint firstItem="Wk0-cf-dB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="veA-uH-Ry5"/>
+                    <constraint firstItem="jUd-uX-hUq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vvD-xB-6bZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="jUd-uX-hUq" id="6RZ-ZQ-W23"/>
+                <outlet property="titleLabel" destination="Wk0-cf-dB2" id="RVm-Pw-6tV"/>
+            </connections>
+            <point key="canvasLocation" x="74.615384615384613" y="73.93364928909952"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="jpGray01">
+            <color red="0.19607843137254902" green="0.20392156862745098" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
