@@ -14,8 +14,8 @@
 		AF960C2A292281EC003F7925 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C29292281EC003F7925 /* Cache.swift */; };
 		FD7A2C272922068E00A856F1 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD7A2C262922068E00A856F1 /* RxAlamofire */; };
 		FDCA85A82925E98A00F274FB /* CellResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A72925E98A00F274FB /* CellResponse.swift */; };
-		FDCA85AA2925EAFE00F274FB /* CompanyCellDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A92925EAFE00F274FB /* CompanyCellDTO+Mapping.swift */; };
-		FDCA85AC2925ECA300F274FB /* RecruitCellDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85AB2925ECA300F274FB /* RecruitCellDTO+Mapping.swift */; };
+		FDCA85AA2925EAFE00F274FB /* InterviewDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A92925EAFE00F274FB /* InterviewDTO+Mapping.swift */; };
+		FDCA85AC2925ECA300F274FB /* RecruitListDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85AB2925ECA300F274FB /* RecruitListDTO+Mapping.swift */; };
 		FDCA85AF2925ED8100F274FB /* CellTypeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85AE2925ED8100F274FB /* CellTypeDTO.swift */; };
 		FDCA85B22925EF0D00F274FB /* CellUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85B12925EF0D00F274FB /* CellUseCase.swift */; };
 		FDCA85B42925EF2100F274FB /* CellNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85B32925EF2100F274FB /* CellNetwork.swift */; };
@@ -49,8 +49,8 @@
 		AF960C27292274B1003F7925 /* RecruitDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecruitDTO+Mapping.swift"; sourceTree = "<group>"; };
 		AF960C29292281EC003F7925 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		FDCA85A72925E98A00F274FB /* CellResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResponse.swift; sourceTree = "<group>"; };
-		FDCA85A92925EAFE00F274FB /* CompanyCellDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyCellDTO+Mapping.swift"; sourceTree = "<group>"; };
-		FDCA85AB2925ECA300F274FB /* RecruitCellDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecruitCellDTO+Mapping.swift"; sourceTree = "<group>"; };
+		FDCA85A92925EAFE00F274FB /* InterviewDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewDTO+Mapping.swift"; sourceTree = "<group>"; };
+		FDCA85AB2925ECA300F274FB /* RecruitListDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecruitListDTO+Mapping.swift"; sourceTree = "<group>"; };
 		FDCA85AE2925ED8100F274FB /* CellTypeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeDTO.swift; sourceTree = "<group>"; };
 		FDCA85B12925EF0D00F274FB /* CellUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellUseCase.swift; sourceTree = "<group>"; };
 		FDCA85B32925EF2100F274FB /* CellNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNetwork.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 				AF960C20292271CA003F7925 /* RatingDTO+Mapping.swift */,
 				AF960C1E29227172003F7925 /* DomainConvertibleType.swift */,
 				FDCA85A72925E98A00F274FB /* CellResponse.swift */,
-				FDCA85A92925EAFE00F274FB /* CompanyCellDTO+Mapping.swift */,
-				FDCA85AB2925ECA300F274FB /* RecruitCellDTO+Mapping.swift */,
+				FDCA85A92925EAFE00F274FB /* InterviewDTO+Mapping.swift */,
+				FDCA85AB2925ECA300F274FB /* RecruitListDTO+Mapping.swift */,
 				FDCA85C0292605A400F274FB /* ReviewCellDTO+Mapping.swift */,
 				FDCA85AE2925ED8100F274FB /* CellTypeDTO.swift */,
 			);
@@ -299,7 +299,7 @@
 			files = (
 				FDCDB4562923216E00D11533 /* RecruitUseCase.swift in Sources */,
 				FDCDB4532923202A00D11533 /* RecruitResponse.swift in Sources */,
-				FDCA85AA2925EAFE00F274FB /* CompanyCellDTO+Mapping.swift in Sources */,
+				FDCA85AA2925EAFE00F274FB /* InterviewDTO+Mapping.swift in Sources */,
 				FDCA85B42925EF2100F274FB /* CellNetwork.swift in Sources */,
 				FDCA85C1292605A400F274FB /* ReviewCellDTO+Mapping.swift in Sources */,
 				FDCA85C3292608A800F274FB /* CustomDateDecodingStrategy.swift in Sources */,
@@ -312,7 +312,7 @@
 				FDCDB45129231F9600D11533 /* RecruitsNetwork.swift in Sources */,
 				FDCA85AF2925ED8100F274FB /* CellTypeDTO.swift in Sources */,
 				FDCDB44D2923148E00D11533 /* Network.swift in Sources */,
-				FDCA85AC2925ECA300F274FB /* RecruitCellDTO+Mapping.swift in Sources */,
+				FDCA85AC2925ECA300F274FB /* RecruitListDTO+Mapping.swift in Sources */,
 				AF960C21292271CA003F7925 /* RatingDTO+Mapping.swift in Sources */,
 				AF960C1F29227172003F7925 /* DomainConvertibleType.swift in Sources */,
 				AF960C28292274B1003F7925 /* RecruitDTO+Mapping.swift in Sources */,

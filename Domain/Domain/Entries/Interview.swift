@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CompanyCellType {
+public struct Interview {
     public let logoURL: String
     public let name: String
     public let industryName: String

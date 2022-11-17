@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import RxSwift
 
-class RecruitCell: UICollectionViewCell {
+final class RecruitCell: UICollectionViewCell {
     
     static let reuseIdentifier = "RecruitCell"
 

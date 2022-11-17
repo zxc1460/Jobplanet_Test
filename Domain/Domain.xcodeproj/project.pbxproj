@@ -18,9 +18,9 @@
 		FDAFCD25292228F4009668A9 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFCD24292228F4009668A9 /* UseCaseProvider.swift */; };
 		FDCA85A02925D50000F274FB /* CompanyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA859F2925D50000F274FB /* CompanyUseCase.swift */; };
 		FDCA85A22925D8A500F274FB /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A12925D8A500F274FB /* CellType.swift */; };
-		FDCA85A42925D8DB00F274FB /* CompanyCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A32925D8DB00F274FB /* CompanyCellType.swift */; };
-		FDCA85A62925D98200F274FB /* RecruitListCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A52925D98200F274FB /* RecruitListCellType.swift */; };
-		FDCA85BF2926053800F274FB /* ReviewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BE2926053800F274FB /* ReviewCellType.swift */; };
+		FDCA85A42925D8DB00F274FB /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A32925D8DB00F274FB /* Interview.swift */; };
+		FDCA85A62925D98200F274FB /* RecruitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85A52925D98200F274FB /* RecruitList.swift */; };
+		FDCA85BF2926053800F274FB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BE2926053800F274FB /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +45,9 @@
 		FDAFCD24292228F4009668A9 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FDCA859F2925D50000F274FB /* CompanyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyUseCase.swift; sourceTree = "<group>"; };
 		FDCA85A12925D8A500F274FB /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
-		FDCA85A32925D8DB00F274FB /* CompanyCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCellType.swift; sourceTree = "<group>"; };
-		FDCA85A52925D98200F274FB /* RecruitListCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitListCellType.swift; sourceTree = "<group>"; };
-		FDCA85BE2926053800F274FB /* ReviewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCellType.swift; sourceTree = "<group>"; };
+		FDCA85A32925D8DB00F274FB /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
+		FDCA85A52925D98200F274FB /* RecruitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitList.swift; sourceTree = "<group>"; };
+		FDCA85BE2926053800F274FB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +123,9 @@
 				FDAFCD1E292208DA009668A9 /* Company.swift */,
 				FDAFCD20292208E2009668A9 /* Rating.swift */,
 				FDCA85A12925D8A500F274FB /* CellType.swift */,
-				FDCA85A32925D8DB00F274FB /* CompanyCellType.swift */,
-				FDCA85A52925D98200F274FB /* RecruitListCellType.swift */,
-				FDCA85BE2926053800F274FB /* ReviewCellType.swift */,
+				FDCA85A32925D8DB00F274FB /* Interview.swift */,
+				FDCA85A52925D98200F274FB /* RecruitList.swift */,
+				FDCA85BE2926053800F274FB /* Review.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -247,13 +247,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAFCD21292208E2009668A9 /* Rating.swift in Sources */,
-				FDCA85BF2926053800F274FB /* ReviewCellType.swift in Sources */,
+				FDCA85BF2926053800F274FB /* Review.swift in Sources */,
 				FDAFCD25292228F4009668A9 /* UseCaseProvider.swift in Sources */,
 				FDAFCD1D2922085D009668A9 /* Recruit.swift in Sources */,
-				FDCA85A42925D8DB00F274FB /* CompanyCellType.swift in Sources */,
+				FDCA85A42925D8DB00F274FB /* Interview.swift in Sources */,
 				FDCA85A02925D50000F274FB /* CompanyUseCase.swift in Sources */,
 				FDCA85A22925D8A500F274FB /* CellType.swift in Sources */,
-				FDCA85A62925D98200F274FB /* RecruitListCellType.swift in Sources */,
+				FDCA85A62925D98200F274FB /* RecruitList.swift in Sources */,
 				FDAFCD232922288E009668A9 /* RecuritUseCase.swift in Sources */,
 				FDAFCD1F292208DA009668A9 /* Company.swift in Sources */,
 			);

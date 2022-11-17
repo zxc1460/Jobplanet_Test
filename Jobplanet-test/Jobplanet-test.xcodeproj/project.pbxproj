@@ -15,6 +15,11 @@
 		AF3657CE29253B6B000F91A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AF3657CD29253B6B000F91A6 /* Kingfisher */; };
 		AF3657D029253D7F000F91A6 /* RecruitNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657CF29253D7F000F91A6 /* RecruitNavigator.swift */; };
 		AF3657D229253D87000F91A6 /* RecruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657D129253D87000F91A6 /* RecruitViewModel.swift */; };
+		AF3657D6292660D0000F91A6 /* InterviewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657D5292660D0000F91A6 /* InterviewCellViewModel.swift */; };
+		AF3657DC2926647F000F91A6 /* CellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657DB2926647F000F91A6 /* CellViewModelType.swift */; };
+		AF3657DE292688C2000F91A6 /* RecruitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657DD292688C2000F91A6 /* RecruitListViewModel.swift */; };
+		AF3657E12926AA02000F91A6 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3657DF2926AA02000F91A6 /* RatingCell.swift */; };
+		AF3657E22926AA02000F91A6 /* RatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3657E02926AA02000F91A6 /* RatingCell.xib */; };
 		AF960C312923C5F7003F7925 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C302923C5F7003F7925 /* Application.swift */; };
 		AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3C2923D367003F7925 /* HighlightedButton.swift */; };
 		AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */; };
@@ -32,8 +37,8 @@
 		FDCA85B92925F7C000F274FB /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85B72925F7C000F274FB /* CompanyViewController.xib */; };
 		FDCA85BB2925F81500F274FB /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BA2925F81500F274FB /* CompanyViewModel.swift */; };
 		FDCA85BD2925F81C00F274FB /* CompanyNavigatoir.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */; };
-		FDCA85C729262D0400F274FB /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85C529262D0400F274FB /* CompanyCell.swift */; };
-		FDCA85C829262D0400F274FB /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85C629262D0400F274FB /* CompanyCell.xib */; };
+		FDCA85C729262D0400F274FB /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85C529262D0400F274FB /* InterviewCell.swift */; };
+		FDCA85C829262D0400F274FB /* InterviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85C629262D0400F274FB /* InterviewCell.xib */; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
 		FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1042921BC4500852207 /* SceneDelegate.swift */; };
 		FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10B2921BC4600852207 /* Assets.xcassets */; };
@@ -123,6 +128,11 @@
 		AF3657CA29251AF5000F91A6 /* RecruitCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitCellViewModel.swift; sourceTree = "<group>"; };
 		AF3657CF29253D7F000F91A6 /* RecruitNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitNavigator.swift; sourceTree = "<group>"; };
 		AF3657D129253D87000F91A6 /* RecruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitViewModel.swift; sourceTree = "<group>"; };
+		AF3657D5292660D0000F91A6 /* InterviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCellViewModel.swift; sourceTree = "<group>"; };
+		AF3657DB2926647F000F91A6 /* CellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelType.swift; sourceTree = "<group>"; };
+		AF3657DD292688C2000F91A6 /* RecruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitListViewModel.swift; sourceTree = "<group>"; };
+		AF3657DF2926AA02000F91A6 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		AF3657E02926AA02000F91A6 /* RatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingCell.xib; sourceTree = "<group>"; };
 		AF960C302923C5F7003F7925 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		AF960C3C2923D367003F7925 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		AF960C3F2923D3AF003F7925 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -138,8 +148,8 @@
 		FDCA85B72925F7C000F274FB /* CompanyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyViewController.xib; sourceTree = "<group>"; };
 		FDCA85BA2925F81500F274FB /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
 		FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNavigatoir.swift; sourceTree = "<group>"; };
-		FDCA85C529262D0400F274FB /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
-		FDCA85C629262D0400F274FB /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
+		FDCA85C529262D0400F274FB /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
+		FDCA85C629262D0400F274FB /* InterviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewCell.xib; sourceTree = "<group>"; };
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1042921BC4500852207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +215,8 @@
 			children = (
 				FDDBFA142924E42A00495755 /* TagCell.swift */,
 				FDDBFA152924E42A00495755 /* TagCell.xib */,
+				AF3657DF2926AA02000F91A6 /* RatingCell.swift */,
+				AF3657E02926AA02000F91A6 /* RatingCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -225,7 +237,7 @@
 				FDCA859A2925CE2B00F274FB /* RecruitDetail */,
 				FDCA85992925C16500F274FB /* RecruitCell */,
 				FDDBF9FD2924AF1000495755 /* Company */,
-				FDCA85C429262CE900F274FB /* CompanyCell */,
+				FDCA85C429262CE900F274FB /* InterviewCell */,
 				FDD9A99329263B1F00DDEE0C /* RecruitListCell */,
 			);
 			path = Scenes;
@@ -292,13 +304,14 @@
 			path = RecruitDetail;
 			sourceTree = "<group>";
 		};
-		FDCA85C429262CE900F274FB /* CompanyCell */ = {
+		FDCA85C429262CE900F274FB /* InterviewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA85C529262D0400F274FB /* CompanyCell.swift */,
-				FDCA85C629262D0400F274FB /* CompanyCell.xib */,
+				AF3657D5292660D0000F91A6 /* InterviewCellViewModel.swift */,
+				FDCA85C529262D0400F274FB /* InterviewCell.swift */,
+				FDCA85C629262D0400F274FB /* InterviewCell.xib */,
 			);
-			path = CompanyCell;
+			path = InterviewCell;
 			sourceTree = "<group>";
 		};
 		FDCFC0F62921BC4500852207 = {
@@ -377,6 +390,7 @@
 		FDD9A99329263B1F00DDEE0C /* RecruitListCell */ = {
 			isa = PBXGroup;
 			children = (
+				AF3657DD292688C2000F91A6 /* RecruitListViewModel.swift */,
 				FDD9A99429263B3400DDEE0C /* RecruitListCell.swift */,
 				FDD9A99529263B3400DDEE0C /* RecruitListCell.xib */,
 			);
@@ -409,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				FDDBFA072924B03700495755 /* ViewModelType.swift */,
+				AF3657DB2926647F000F91A6 /* CellViewModelType.swift */,
 				FDCA85972925BBEB00F274FB /* FetchingTracker.swift */,
 			);
 			path = Common;
@@ -568,12 +583,13 @@
 			files = (
 				FDCA85B92925F7C000F274FB /* CompanyViewController.xib in Resources */,
 				FDCA859E2925CE4700F274FB /* RecruitDetailViewController.xib in Resources */,
+				AF3657E22926AA02000F91A6 /* RatingCell.xib in Resources */,
 				FDD9A99729263B3400DDEE0C /* RecruitListCell.xib in Resources */,
 				FDDBFA172924E42A00495755 /* TagCell.xib in Resources */,
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
 				AF3657C62925146A000F91A6 /* RecruitCell.xib in Resources */,
-				FDCA85C829262D0400F274FB /* CompanyCell.xib in Resources */,
+				FDCA85C829262D0400F274FB /* InterviewCell.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
 				FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */,
 			);
@@ -607,11 +623,15 @@
 				AF3657D029253D7F000F91A6 /* RecruitNavigator.swift in Sources */,
 				FDCA85B82925F7C000F274FB /* CompanyViewController.swift in Sources */,
 				FDDBFA162924E42A00495755 /* TagCell.swift in Sources */,
+				AF3657E12926AA02000F91A6 /* RatingCell.swift in Sources */,
 				AF960C3D2923D367003F7925 /* HighlightedButton.swift in Sources */,
 				FDCA85982925BBEB00F274FB /* FetchingTracker.swift in Sources */,
-				FDCA85C729262D0400F274FB /* CompanyCell.swift in Sources */,
+				FDCA85C729262D0400F274FB /* InterviewCell.swift in Sources */,
 				AF960C422923D408003F7925 /* UIFontExtension.swift in Sources */,
+				AF3657DE292688C2000F91A6 /* RecruitListViewModel.swift in Sources */,
+				AF3657DC2926647F000F91A6 /* CellViewModelType.swift in Sources */,
 				FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */,
+				AF3657D6292660D0000F91A6 /* InterviewCellViewModel.swift in Sources */,
 				FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */,
 				AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */,
 				FDCA85BB2925F81500F274FB /* CompanyViewModel.swift in Sources */,

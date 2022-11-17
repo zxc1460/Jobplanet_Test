@@ -8,9 +8,9 @@
 import Foundation
 import Domain
 
-extension ReviewCellType: DomainType {}
+extension Review: DomainType {}
 
-public struct ReviewCellDTO: Codable {
+public struct ReviewDTO: Codable {
     let logoURL: String
     let name: String
     let industryName: String
@@ -31,11 +31,11 @@ public struct ReviewCellDTO: Codable {
 }
 
 
-extension ReviewCellDTO: DomainConvertibleType {
-    typealias `Type` = ReviewCellType
+extension ReviewDTO: DomainConvertibleType {
+    typealias `Type` = Review
     
-    func asDomain() -> ReviewCellType {
-        return ReviewCellType(
+    func asDomain() -> Review {
+        return Review(
             logoURL: logoURL,
             name: name,
             industryName: industryName,

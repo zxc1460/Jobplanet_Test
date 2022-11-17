@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RecruitListCellType {
+public struct RecruitList {
     public let count: Int
     public let sectionTitle: String
     public let recruits: [Recruit]

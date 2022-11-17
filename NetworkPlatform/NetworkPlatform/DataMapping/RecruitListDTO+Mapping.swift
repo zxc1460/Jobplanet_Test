@@ -8,9 +8,9 @@
 import Foundation
 import Domain
 
-extension RecruitListCellType: DomainType {}
+extension RecruitList: DomainType {}
 
-public struct RecruitCellDTO: Codable {
+public struct RecruitListDTO: Codable {
     let count: Int
     let sectionTitle: String
     let recruits: [RecruitDTO]
@@ -22,11 +22,11 @@ public struct RecruitCellDTO: Codable {
     }
 }
 
-extension RecruitCellDTO: DomainConvertibleType {
-    typealias `Type` = RecruitListCellType
+extension RecruitListDTO: DomainConvertibleType {
+    typealias `Type` = RecruitList
     
-    func asDomain() -> RecruitListCellType {
-        return RecruitListCellType(
+    func asDomain() -> RecruitList {
+        return RecruitList(
             count: count,
             sectionTitle: sectionTitle,
             recruits: recruits.map { $0.asDomain() }

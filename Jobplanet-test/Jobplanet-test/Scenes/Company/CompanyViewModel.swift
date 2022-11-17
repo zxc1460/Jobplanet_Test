@@ -18,7 +18,7 @@ final class CompanyViewModel: ViewModelType {
     
     struct Output {
         let fetching: Driver<Bool>
-        let items: Driver<[CellType]>
+        let items: Driver<[CellViewModelType]>
         let itemIsEmpty: Driver<Bool>
     }
     
@@ -36,15 +36,36 @@ final class CompanyViewModel: ViewModelType {
         let items = Driver.merge(input.trigger.map { String() }, input.search)
             .distinctUntilChanged()
             .trackFetchinfg(fetchingTracker)
-            .flatMapLatest { keyword -> Observable<[CellType]> in
+            .flatMapLatest { keyword -> Observable<[CellViewModelType]> in
                 if keyword.isEmpty {
                     return self.useCase.cells()
+                        .map { cells -> [CellViewModelType] in
+                            return cells.compactMap {
+                                switch $0 {
+                                case .interview(let interview):
+                                    return InterviewCellViewModel(with: interview, navigator: self.navigator)
+                                case .recruitList(let recruitList):
+                                    return RecruitListViewModel(with: recruitList, navigator: self.navigator)
+                                default:
+                                    return nil
+                                }
+                            }
+                        }
                 } else {
                     return self.useCase.search(keyword: keyword)
+                        .map { cells -> [CellViewModelType] in
+                            return cells.compactMap {
+                                switch $0 {
+                                case .interview(let interview):
+                                    return InterviewCellViewModel(with: interview, navigator: self.navigator)
+                                default:
+                                    return nil
+                                }
+                            }
+                        }
                 }
             }
             .asDriverOnErrorJustComplete()
-            
         
         let fetching = fetchingTracker.asDriver()
         

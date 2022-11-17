@@ -59,8 +59,8 @@ final class CellUseCase<Cache>: Domain.CellUseCase where Cache: Caching, Cache.V
                     switch cell {
                     case .recruitList, .review:
                         return false
-                    case .company(let company):
-                        return company.name.lowercased().replacingOccurrences(of: " ", with: "").contains(keyword)
+                    case .interview(let interview):
+                        return interview.name.lowercased().replacingOccurrences(of: " ", with: "").contains(keyword)
                     }
                 }
             }

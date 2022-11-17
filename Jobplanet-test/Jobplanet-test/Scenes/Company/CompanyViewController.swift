@@ -9,8 +9,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CompanyViewController: UIViewController {
+final class CompanyViewController: UIViewController {
     
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel: CompanyViewModel
@@ -28,7 +29,18 @@ class CompanyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
         bindViewModel()
+    }
+    
+    private func setUI() {
+        self.tableView.separatorColor = .jpGray03
+        self.tableView.separatorInset = .zero
+        self.tableView.estimatedRowHeight = 400
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.allowsSelection = false
+        self.tableView.register(UINib(nibName: "InterviewCell", bundle: nil), forCellReuseIdentifier: InterviewCell.reuseIdentifier)
+        self.tableView.register(UINib(nibName: "RecruitListCell", bundle: nil), forCellReuseIdentifier: RecruitListCell.reuseIdentifier)
     }
     
     private func bindViewModel() {
@@ -53,17 +65,33 @@ class CompanyViewController: UIViewController {
         let output = viewModel.transform(input: input)
         
         output.items
-            .drive()
+            .drive(tableView.rx.items) { tableView, idx, cellViewModel in
+                if let cellViewModel = cellViewModel as? InterviewCellViewModel,
+                    let cell = tableView.dequeueReusableCell(withIdentifier: InterviewCell.reuseIdentifier) as? InterviewCell {
+                        
+                    cell.bind(cellViewModel)
+                        
+                    return cell
+                } else if let cellViewModel = cellViewModel as? RecruitListViewModel,
+                          let cell = tableView.dequeueReusableCell(withIdentifier: RecruitListCell.reuseIdentifier) as? RecruitListCell {
+                    
+                    cell.bind(cellViewModel)
+                    
+                    return cell
+                }
+                    
+                return UITableViewCell()
+            }
             .disposed(by: disposeBag)
                 
         output.fetching
             .map { !$0 }
-            .drive()
+            .drive(parentViewController.activityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
-                
+        
         output.itemIsEmpty
             .map { !$0 }
-            .drive()
+            .drive(emptyView.rx.isHidden)
             .disposed(by: disposeBag)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public enum CellType {
-    case company(CompanyCellType)
-    case recruitList(RecruitListCellType)
-    case review(ReviewCellType)
+    case interview(Interview)
+    case recruitList(RecruitList)
+    case review(Review)
 }

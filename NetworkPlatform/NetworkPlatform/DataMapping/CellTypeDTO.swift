@@ -11,9 +11,9 @@ import Domain
 extension CellType: DomainType {}
 
 enum CellTypeDTO: Codable {
-    case company(CompanyCellDTO)
-    case recruit(RecruitCellDTO)
-    case review(ReviewCellDTO)
+    case interview(InterviewDTO)
+    case recruitList(RecruitListDTO)
+    case review(ReviewDTO)
     
     private enum CodingKeys: String, CodingKey {
         case type = "cell_type"
@@ -27,13 +27,13 @@ enum CellTypeDTO: Codable {
         
         switch type {
         case "CELL_TYPE_COMPANY":
-            let company = try singleContainer.decode(CompanyCellDTO.self)
-            self = .company(company)
+            let interview = try singleContainer.decode(InterviewDTO.self)
+            self = .interview(interview)
         case "CELL_TYPE_HORIZONTAL_THEME":
-            let recruit = try singleContainer.decode(RecruitCellDTO.self)
-            self = .recruit(recruit)
+            let recruitList = try singleContainer.decode(RecruitListDTO.self)
+            self = .recruitList(recruitList)
         case "CELL_TYPE_REVIEW":
-            let review = try singleContainer.decode(ReviewCellDTO.self)
+            let review = try singleContainer.decode(ReviewDTO.self)
             self = .review(review)
         default:
             fatalError("Unknown cell_type of content")
@@ -44,10 +44,10 @@ enum CellTypeDTO: Codable {
         var singleContainer = encoder.singleValueContainer()
         
         switch self {
-        case .company(let company):
-            try singleContainer.encode(company)
-        case .recruit(let recruit):
-            try singleContainer.encode(recruit)
+        case .interview(let interview):
+            try singleContainer.encode(interview)
+        case .recruitList(let recruitList):
+            try singleContainer.encode(recruitList)
         case .review(let review):
             try singleContainer.encode(review)
         }
@@ -58,11 +58,19 @@ extension CellTypeDTO: DomainConvertibleType {
     typealias `Type` = CellType
     
     func asDomain() -> CellType {
+//        switch self {
+//        case .recruit(let recruitList):
+//            return .recruitList(recruitList.asDomain())
+//        case .company(let company):
+//            return .company(company.asDomain())
+//        case .review(let review):
+//            return .review(review.asDomain())
+//        }
         switch self {
-        case .recruit(let recruitList):
+        case .recruitList(let recruitList):
             return .recruitList(recruitList.asDomain())
-        case .company(let company):
-            return .company(company.asDomain())
+        case .interview(let interview):
+            return .interview(interview.asDomain())
         case .review(let review):
             return .review(review.asDomain())
         }

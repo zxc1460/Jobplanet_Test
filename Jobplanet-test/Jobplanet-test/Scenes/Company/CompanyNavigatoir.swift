@@ -9,19 +9,19 @@ import Foundation
 import UIKit
 import Domain
 
-protocol CompanyNavigatorType {
-    func toCompanyDetail(_ company: CompanyCellType)
+protocol CompanyNavigatorType: RecruitNavigatorType {
+    func toInterview(_ interview: Interview)
 }
 
-class CompanyNavigator: CompanyNavigatorType, RecruitNavigatorType {
+final class CompanyNavigator: CompanyNavigatorType {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func toCompanyDetail(_ company: CompanyCellType) {
-        print("회사 디테일로 이동\(company.name)")
+    func toInterview(_ interview: Interview) {
+        print("인터뷰 디테일로 이동\(interview.name)")
     }
     
     func toRecruitDetail(_ recruit: Recruit) {
