@@ -34,6 +34,12 @@ class MainViewController: UIViewController {
         bindViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setUI() {
         recruitButton.setTitleColor(.jpGray01, for: .normal)
         recruitButton.setTitleColor(.white, for: .selected)
@@ -45,6 +51,7 @@ class MainViewController: UIViewController {
     
     private func bindViewModel() {
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+            .take(1)
             .mapToVoid()
             .asDriverOnErrorJustComplete()
             .asDriver()
@@ -59,7 +66,10 @@ class MainViewController: UIViewController {
         let output = viewModel.transform(input: input)
         
         output.selected
-            .do(onNext: self.highlightButton)
+            .do(onNext: {
+                self.highlightButton($0)
+                self.searchTextField.text = ""
+            })
             .drive()
             .disposed(by: disposeBag)
     }

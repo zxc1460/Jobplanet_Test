@@ -17,6 +17,7 @@ final class RecruitCellViewModel: ViewModelType {
     
     struct Output {
         let selectedRecruit: Driver<Recruit>
+        let appealItems: Driver<[String]>
     }
     
     let recruit: Recruit
@@ -33,7 +34,9 @@ final class RecruitCellViewModel: ViewModelType {
                 return self.recruit
             }
             .do(onNext: navigator.toRecruitDetail)
+        
+        let appealItems = Observable.just(recruit.appeals).asDriverOnErrorJustComplete()
                 
-        return Output(selectedRecruit: selectedRecruit)
+        return Output(selectedRecruit: selectedRecruit, appealItems: appealItems)
     }
 }

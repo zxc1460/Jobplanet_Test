@@ -21,10 +21,18 @@ final class CompanyNavigator: CompanyNavigatorType {
     }
     
     func toInterview(_ interview: Interview) {
-        print("인터뷰 디테일로 이동\(interview.name)")
+        let navigator = InterviewNavigator(navigationController: navigationController)
+        let viewModel = InterviewViewModel(with: interview, navigator: navigator)
+        let vc = InterviewViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func toRecruitDetail(_ recruit: Recruit) {
-        print("채용 디테일로 이동 \(recruit.title)")
+        let navigator = RecruitDetailNavigator(navigationController: navigationController)
+        let viewModel = RecruitDetailViewModel(with: recruit, navigator: navigator)
+        let vc = RecruitDetailViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -26,7 +26,6 @@ final class RecruitCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         setUI()
     }
@@ -37,13 +36,9 @@ final class RecruitCell: UICollectionViewCell {
         let layout = TagCollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 4
         layout.sectionInset = .zero
-        
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         tagCollectionView.collectionViewLayout = layout
-        
         tagCollectionView.register(UINib(nibName: "TagCell", bundle: nil), forCellWithReuseIdentifier: TagCell.reuseIdentifier)
-        
-        tagCollectionView.dataSource = self
-        tagCollectionView.delegate = self
         
         imageView.kf.indicatorType = .activity
     }
@@ -77,35 +72,23 @@ final class RecruitCell: UICollectionViewCell {
         output.selectedRecruit
             .drive()
             .disposed(by: disposeBag)
+        
+        output.appealItems
+            .drive(tagCollectionView.rx.items) { collectionView, idx, appeal in
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCell.reuseIdentifier, for: IndexPath(row: idx, section: 0)) as? TagCell else {
+                    return UICollectionViewCell()
+                }
+                
+                cell.configure(title: appeal)
+                
+                return cell
+            }
+            .disposed(by: disposeBag)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         self.disposeBag = DisposeBag()
-    }
-}
-
-extension RecruitCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = viewModel?.recruit.appeals[indexPath.row].textSize(from: .fontWithName(type: .regular, size: 11)).width ?? .zero
-        
-        return CGSize(width: width + 12, height: collectionView.frame.height)
-    }
-}
-
-extension RecruitCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.recruit.appeals.count ?? .zero
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCell.reuseIdentifier, for: indexPath) as? TagCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.configure(title: viewModel?.recruit.appeals[indexPath.row] ?? "")
-        
-        return cell
     }
 }

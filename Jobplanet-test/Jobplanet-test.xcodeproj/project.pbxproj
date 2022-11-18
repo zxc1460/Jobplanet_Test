@@ -39,6 +39,12 @@
 		FDCA85BD2925F81C00F274FB /* CompanyNavigatoir.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */; };
 		FDCA85C729262D0400F274FB /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA85C529262D0400F274FB /* InterviewCell.swift */; };
 		FDCA85C829262D0400F274FB /* InterviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCA85C629262D0400F274FB /* InterviewCell.xib */; };
+		FDCE2EF22926F3D40025AEFD /* RecruitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE2EF12926F3D40025AEFD /* RecruitDetailViewModel.swift */; };
+		FDCE2EF42926F7450025AEFD /* RecruitDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE2EF32926F7450025AEFD /* RecruitDetailNavigator.swift */; };
+		FDCE2EFF29274BD50025AEFD /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE2EFD29274BD50025AEFD /* InterviewViewController.swift */; };
+		FDCE2F0029274BD50025AEFD /* InterviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCE2EFE29274BD50025AEFD /* InterviewViewController.xib */; };
+		FDCE2F0429274F7D0025AEFD /* InterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE2F0329274F7D0025AEFD /* InterviewViewModel.swift */; };
+		FDCE2F062927500A0025AEFD /* InterviewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE2F052927500A0025AEFD /* InterviewNavigator.swift */; };
 		FDCFC1032921BC4500852207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1022921BC4500852207 /* AppDelegate.swift */; };
 		FDCFC1052921BC4500852207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFC1042921BC4500852207 /* SceneDelegate.swift */; };
 		FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCFC10B2921BC4600852207 /* Assets.xcassets */; };
@@ -150,6 +156,12 @@
 		FDCA85BC2925F81C00F274FB /* CompanyNavigatoir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNavigatoir.swift; sourceTree = "<group>"; };
 		FDCA85C529262D0400F274FB /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
 		FDCA85C629262D0400F274FB /* InterviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewCell.xib; sourceTree = "<group>"; };
+		FDCE2EF12926F3D40025AEFD /* RecruitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitDetailViewModel.swift; sourceTree = "<group>"; };
+		FDCE2EF32926F7450025AEFD /* RecruitDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitDetailNavigator.swift; sourceTree = "<group>"; };
+		FDCE2EFD29274BD50025AEFD /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
+		FDCE2EFE29274BD50025AEFD /* InterviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewViewController.xib; sourceTree = "<group>"; };
+		FDCE2F0329274F7D0025AEFD /* InterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewModel.swift; sourceTree = "<group>"; };
+		FDCE2F052927500A0025AEFD /* InterviewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewNavigator.swift; sourceTree = "<group>"; };
 		FDCFC0FF2921BC4500852207 /* Jobplanet-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobplanet-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCFC1022921BC4500852207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCFC1042921BC4500852207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 				FDDBF9FD2924AF1000495755 /* Company */,
 				FDCA85C429262CE900F274FB /* InterviewCell */,
 				FDD9A99329263B1F00DDEE0C /* RecruitListCell */,
+				FDCE2EFC29274AE30025AEFD /* Interview */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -298,8 +311,10 @@
 		FDCA859A2925CE2B00F274FB /* RecruitDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FDCE2EF32926F7450025AEFD /* RecruitDetailNavigator.swift */,
 				FDCA859B2925CE4700F274FB /* RecruitDetailViewController.swift */,
 				FDCA859C2925CE4700F274FB /* RecruitDetailViewController.xib */,
+				FDCE2EF12926F3D40025AEFD /* RecruitDetailViewModel.swift */,
 			);
 			path = RecruitDetail;
 			sourceTree = "<group>";
@@ -312,6 +327,17 @@
 				FDCA85C629262D0400F274FB /* InterviewCell.xib */,
 			);
 			path = InterviewCell;
+			sourceTree = "<group>";
+		};
+		FDCE2EFC29274AE30025AEFD /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE2F052927500A0025AEFD /* InterviewNavigator.swift */,
+				FDCE2F0329274F7D0025AEFD /* InterviewViewModel.swift */,
+				FDCE2EFD29274BD50025AEFD /* InterviewViewController.swift */,
+				FDCE2EFE29274BD50025AEFD /* InterviewViewController.xib */,
+			);
+			path = Interview;
 			sourceTree = "<group>";
 		};
 		FDCFC0F62921BC4500852207 = {
@@ -589,6 +615,7 @@
 				FDCFC10F2921BC4600852207 /* LaunchScreen.storyboard in Resources */,
 				AF960C472923D4F2003F7925 /* MainViewController.xib in Resources */,
 				AF3657C62925146A000F91A6 /* RecruitCell.xib in Resources */,
+				FDCE2F0029274BD50025AEFD /* InterviewViewController.xib in Resources */,
 				FDCA85C829262D0400F274FB /* InterviewCell.xib in Resources */,
 				FDCFC10C2921BC4600852207 /* Assets.xcassets in Resources */,
 				FDDBFA012924AF2D00495755 /* RecruitViewController.xib in Resources */,
@@ -636,14 +663,19 @@
 				AF960C492923D57D003F7925 /* UIViewExtension.swift in Sources */,
 				FDCA85BB2925F81500F274FB /* CompanyViewModel.swift in Sources */,
 				FDDBFA0D2924B1DB00495755 /* MainViewModel.swift in Sources */,
+				FDCE2F0429274F7D0025AEFD /* InterviewViewModel.swift in Sources */,
+				FDCE2EF22926F3D40025AEFD /* RecruitDetailViewModel.swift in Sources */,
 				FDDBFA002924AF2D00495755 /* RecruitViewController.swift in Sources */,
 				FDDBFA082924B03700495755 /* ViewModelType.swift in Sources */,
 				AF960C402923D3AF003F7925 /* UIColorExtension.swift in Sources */,
 				FDDBFA0A2924B06600495755 /* MainNavigator.swift in Sources */,
 				FDCA859D2925CE4700F274FB /* RecruitDetailViewController.swift in Sources */,
+				FDCE2EF42926F7450025AEFD /* RecruitDetailNavigator.swift in Sources */,
 				AF3657C829251AA9000F91A6 /* StringExtension.swift in Sources */,
 				AF960C462923D4F2003F7925 /* MainViewController.swift in Sources */,
 				AF3657C029251400000F91A6 /* TagCollectionViewFlowLayout.swift in Sources */,
+				FDCE2F062927500A0025AEFD /* InterviewNavigator.swift in Sources */,
+				FDCE2EFF29274BD50025AEFD /* InterviewViewController.swift in Sources */,
 				AF3657C52925146A000F91A6 /* RecruitCell.swift in Sources */,
 				AF3657CB29251AF5000F91A6 /* RecruitCellViewModel.swift in Sources */,
 				FDD9A99629263B3400DDEE0C /* RecruitListCell.swift in Sources */,

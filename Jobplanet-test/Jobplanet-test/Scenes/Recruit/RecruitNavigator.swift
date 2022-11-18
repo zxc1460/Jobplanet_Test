@@ -13,7 +13,7 @@ protocol RecruitNavigatorType {
     func toRecruitDetail(_ recruit: Recruit)
 }
 
-class RecruitNavigator: RecruitNavigatorType {
+final class RecruitNavigator: RecruitNavigatorType {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -21,6 +21,10 @@ class RecruitNavigator: RecruitNavigatorType {
     }
     
     func toRecruitDetail(_ recruit: Recruit) {
-        print("디테일로 이동 \(recruit.title)")
+        let navigator = RecruitDetailNavigator(navigationController: navigationController)
+        let viewModel = RecruitDetailViewModel(with: recruit, navigator: navigator)
+        let vc = RecruitDetailViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(vc, animated: true)
     }
 }

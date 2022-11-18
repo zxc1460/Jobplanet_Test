@@ -59,6 +59,7 @@ final class RecruitViewController: UIViewController {
         }
         
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+            .take(1)
             .mapToVoid()
             .asDriverOnErrorJustComplete()
             .asDriver()

@@ -13,7 +13,7 @@ protocol MainNavigatorType {
     func toCompany()
 }
 
-class MainNavigator: MainNavigatorType {
+final class MainNavigator: MainNavigatorType {
     private let services: UseCaseProvider
     private let navigationController: UINavigationController
     
