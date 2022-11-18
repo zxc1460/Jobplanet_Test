@@ -14,6 +14,7 @@ enum CellTypeDTO: Codable {
     case interview(InterviewDTO)
     case recruitList(RecruitListDTO)
     case review(ReviewDTO)
+    case unknown
     
     private enum CodingKeys: String, CodingKey {
         case type = "cell_type"
@@ -36,7 +37,7 @@ enum CellTypeDTO: Codable {
             let review = try singleContainer.decode(ReviewDTO.self)
             self = .review(review)
         default:
-            fatalError("Unknown cell_type of content")
+            self = .unknown
         }
     }
     
@@ -50,6 +51,8 @@ enum CellTypeDTO: Codable {
             try singleContainer.encode(recruitList)
         case .review(let review):
             try singleContainer.encode(review)
+        case .unknown:
+            fatalError("Unknwon CellType DTO cannot be enocded")
         }
     }
 }
@@ -73,6 +76,8 @@ extension CellTypeDTO: DomainConvertibleType {
             return .interview(interview.asDomain())
         case .review(let review):
             return .review(review.asDomain())
+        case .unknown:
+            return .unknown
         }
     }
 }

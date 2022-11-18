@@ -11,4 +11,5 @@ public enum CellType {
     case interview(Interview)
     case recruitList(RecruitList)
     case review(Review)
+    case unknown
 }

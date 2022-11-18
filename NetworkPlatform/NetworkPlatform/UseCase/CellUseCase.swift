@@ -36,7 +36,7 @@ final class CellUseCase<Cache>: Domain.CellUseCase where Cache: Caching, Cache.V
                                             return $0.cellItems
                                                 .filter {
                                                     switch $0 {
-                                                    case .review:
+                                                    case .unknown, .review:
                                                         return false
                                                     default:
                                                         return true
@@ -57,7 +57,7 @@ final class CellUseCase<Cache>: Domain.CellUseCase where Cache: Caching, Cache.V
             .map { cells in
                 return cells.filter { cell in
                     switch cell {
-                    case .recruitList, .review:
+                    case .unknown, .recruitList, .review:
                         return false
                     case .interview(let interview):
                         return interview.name.lowercased().replacingOccurrences(of: " ", with: "").contains(keyword)
